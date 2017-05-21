@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.cyanogenmod.settings.doze;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -24,12 +24,11 @@ import android.util.Log;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "SamsungDoze";
+    private static final String TAG = "OneplusDoze";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Starting service");
-        context.startService(new Intent(context, SamsungDozeService.class));
+        context.startService(new Intent(context, OneplusDozeService.class));
     }
-
 }

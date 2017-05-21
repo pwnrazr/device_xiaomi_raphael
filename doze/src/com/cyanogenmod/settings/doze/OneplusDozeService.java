@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.cyanogenmod.settings.doze;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -37,8 +37,8 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
 
-public class SamsungDozeService extends Service {
-    private static final String TAG = "SamsungDozeService";
+public class OneplusDozeService extends Service {
+    private static final String TAG = "OneplusDozeService";
     private static final boolean DEBUG = false;
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
@@ -50,21 +50,21 @@ public class SamsungDozeService extends Service {
     private static final int POCKET_DELTA_NS = 1000 * 1000 * 1000;
 
     private Context mContext;
-    private SamsungProximitySensor mSensor;
+    private OneplusProximitySensor mSensor;
     private PowerManager mPowerManager;
 
     private boolean mHandwaveGestureEnabled = false;
     private boolean mPocketGestureEnabled = false;
     private boolean mProximityWakeEnabled = false;
 
-    class SamsungProximitySensor implements SensorEventListener {
+    class OneplusProximitySensor implements SensorEventListener {
         private SensorManager mSensorManager;
         private Sensor mSensor;
 
         private boolean mSawNear = false;
         private long mInPocketTime = 0;
 
-        public SamsungProximitySensor(Context context) {
+        public OneplusProximitySensor(Context context) {
             mSensorManager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
             mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         }
@@ -117,10 +117,10 @@ public class SamsungDozeService extends Service {
 
     @Override
     public void onCreate() {
-        if (DEBUG) Log.d(TAG, "SamsungDozeService Started");
+        if (DEBUG) Log.d(TAG, "OneplusDozeService Started");
         mContext = this;
         mPowerManager = (PowerManager)getSystemService(Context.POWER_SERVICE);
-        mSensor = new SamsungProximitySensor(mContext);
+        mSensor = new OneplusProximitySensor(mContext);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         loadPreferences(sharedPrefs);
         sharedPrefs.registerOnSharedPreferenceChangeListener(mPrefListener);

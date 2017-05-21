@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.cyanogenmod.settings.doze;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ import android.view.MenuItem;
 
 import org.cyanogenmod.internal.util.ScreenType;
 
-public class TouchscreenGestureSettings extends PreferenceActivity {
+public class DozeSettings extends PreferenceActivity {
 
     private static final String KEY_AMBIENT_DISPLAY_ENABLE = "ambient_display_enable";
     private static final String KEY_HAND_WAVE = "gesture_hand_wave";
