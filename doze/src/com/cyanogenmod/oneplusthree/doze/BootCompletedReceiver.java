@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.doze;
+package com.cyanogenmod.oneplusthree.doze;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
