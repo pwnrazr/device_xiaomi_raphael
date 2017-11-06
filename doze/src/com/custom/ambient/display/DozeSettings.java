@@ -18,12 +18,7 @@ package com.custom.ambient.display;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -37,7 +32,6 @@ import android.view.MenuItem;
 public class DozeSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private Context mContext;
-    private SharedPreferences mPreferences;
 
     private SwitchPreference mAmbientDisplayPreference;
     private SwitchPreference mPickUpPreference;
@@ -50,12 +44,6 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
         addPreferencesFromResource(R.xml.doze_settings);
         mContext = getApplicationContext();
         boolean dozeEnabled = Utils.isDozeEnabled(mContext);
-
-        // get shared preference
-        mPreferences = mContext.getSharedPreferences("doze_settings", Activity.MODE_PRIVATE);
-        if (savedInstanceState == null && !mPreferences.getBoolean("first_help_shown", false)) {
-            showHelp();
-        }
 
         mAmbientDisplayPreference =
             (SwitchPreference) findPreference(Utils.AMBIENT_DISPLAY_KEY);
@@ -115,34 +103,5 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
             return true;
         }
         return false;
-    }
-
-    public static class HelpDialogFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.doze_settings_help_title)
-                    .setMessage(R.string.doze_settings_help_text)
-                    .setNegativeButton(R.string.dlg_ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
-                    .create();
-        }
-
-        @Override
-        public void onCancel(DialogInterface dialog) {
-            getActivity().getSharedPreferences("doze_settings", Activity.MODE_PRIVATE)
-                    .edit()
-                    .putBoolean("first_help_shown", true)
-                    .commit();
-        }
-    }
-
-    private void showHelp() {
-        HelpDialogFragment fragment = new HelpDialogFragment();
-        fragment.show(getFragmentManager(), "help_dialog");
     }
 }
