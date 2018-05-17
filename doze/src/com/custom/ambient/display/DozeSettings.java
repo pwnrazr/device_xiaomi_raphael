@@ -90,15 +90,15 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
             return true;
         } else if (Utils.PICK_UP_KEY.equals(key)) {
             mPickUpPreference.setChecked(value);
-            Utils.startService(mContext);
+            Utils.enablePickUp(value, mContext);
             return true;
         } else if (Utils.GESTURE_HAND_WAVE_KEY.equals(key)) {
             mHandwavePreference.setChecked(value);
-            Utils.startService(mContext);
+            Utils.enableHandWave(value, mContext);
             return true;
         } else if (Utils.GESTURE_POCKET_KEY.equals(key)) {
             mPocketPreference.setChecked(value);
-            Utils.startService(mContext);
+            Utils.enablePocketMode(value, mContext);
             return true;
         }
         return false;
