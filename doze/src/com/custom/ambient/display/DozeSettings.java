@@ -17,16 +17,12 @@
 package com.custom.ambient.display;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.provider.Settings;
-import android.view.Menu;
 import android.view.MenuItem;
 
 public class DozeSettings extends PreferenceActivity implements OnPreferenceChangeListener {
@@ -63,7 +59,9 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
         mPocketPreference.setOnPreferenceChangeListener(this);
 
         final ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
