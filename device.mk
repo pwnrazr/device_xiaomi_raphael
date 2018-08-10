@@ -229,6 +229,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service \
     android.hardware.health@2.1-impl \
 
+# Storage health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health.storage@1.0-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
