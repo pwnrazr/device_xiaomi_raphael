@@ -1015,6 +1015,9 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 
+# Soter
+-app/SoterService/SoterService.apk
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc
