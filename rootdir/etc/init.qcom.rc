@@ -163,6 +163,9 @@ on boot
 
     setprop init.svc.console stopped
 
+    # limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
     # Enable qcrild and data services
     enable vendor.qcrild
     enable vendor.qcrild2
