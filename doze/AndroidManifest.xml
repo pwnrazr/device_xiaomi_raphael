@@ -13,7 +13,7 @@
         android:targetSdkVersion="29"/>
 
     <application
-        android:label="OneplusDoze"
+        android:label="CustomDoze"
         android:persistent="true"
         android:supportsRtl="true">
 
@@ -25,7 +25,7 @@
         </receiver>
 
         <service android:name="com.custom.ambient.display.DozeService"
-                 android:permission="OneplusDozeService">
+                 android:permission="CustomDozeService">
         </service>
 
         <activity
