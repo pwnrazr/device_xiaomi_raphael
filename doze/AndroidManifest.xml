@@ -30,7 +30,7 @@
 
         <activity
             android:name=".DozeSettings"
-            android:label="@string/ambient_display_title"
+            android:label="@string/ambient_display_custom_title"
             android:theme="@android:style/Theme.DeviceDefault.Settings">
         </activity>
 

@@ -13,7 +13,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_custom_title">Custom options</string>
+    <string name="ambient_display_title">New notifications</string>
     <string name="ambient_display_summary">Wake screen when you receive notifications</string>
 
     <!-- Tilt sensor -->
