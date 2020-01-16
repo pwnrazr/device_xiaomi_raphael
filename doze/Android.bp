@@ -1,0 +1,13 @@
+android_app {
+    name: "CustomDoze",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    privileged: true,
+    platform_apis: true,
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
