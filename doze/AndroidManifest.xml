@@ -15,7 +15,8 @@
     <application
         android:label="CustomDoze"
         android:persistent="true"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:theme="@style/CustomOptionsTheme">
 
         <receiver android:name="com.custom.ambient.display.BootCompletedReceiver">
             <intent-filter>
@@ -31,7 +32,7 @@
         <activity
             android:name=".DozeSettings"
             android:label="@string/ambient_display_custom_title"
-            android:theme="@android:style/Theme.DeviceDefault.Settings">
+            android:theme="@style/CustomOptionsTheme">
         </activity>
 
     </application>
