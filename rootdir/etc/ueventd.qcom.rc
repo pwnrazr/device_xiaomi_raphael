@@ -62,6 +62,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/hgsl                 0666   system     system
 /dev/iio:device*          0664   system     system
 
+#permissions for UFS RPMB BSG device node
+/dev/0:0:0:49476          0600   system     system
+
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
 
