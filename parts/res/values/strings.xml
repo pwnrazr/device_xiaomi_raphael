@@ -84,4 +84,8 @@
     <string name="popup_camera_calibrate_failed">Couldn\'t calibrate</string>
     <string name="popup_camera_calibrate_success">Calibrated successfully. You can open the front camera now.</string>
 
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">Anti-Flicker Mode</string>
+    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality and color production)</string>
+
 </resources>
