@@ -64,4 +64,10 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ROOT}" false "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
 
+DEVICE_BLOB_ROOT="$ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+patchelf --remove-needed libmegface.so "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/camera.qcom.so
+patchelf --remove-needed libMegviiFacepp-0.5.2.so "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/camera.qcom.so
+patchelf --add-needed libshim_camera.so "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/camera.qcom.so
+
 "${MY_DIR}/setup-makefiles.sh"
