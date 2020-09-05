@@ -304,6 +304,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.filecache_min_kb=153600 \
     ro.lmk.stall_limit_critical=40
 
+# IRQBalance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # KProfiles
 PRODUCT_PACKAGES += \
     KProfiles
