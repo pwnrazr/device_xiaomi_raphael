@@ -209,5 +209,9 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#Broken Rules
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/raphael/BoardConfigVendor.mk
