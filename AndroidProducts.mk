@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The PixelExperience Project
+# Copyright (C) 2020 YAAP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,4 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_raphael.mk
+    $(LOCAL_DIR)/yaap_raphael.mk
+
+COMMON_LUNCH_CHOICES := \
+    yaap_raphael-user \
+    yaap_raphael-userdebug \
+    yaap_raphael-eng
