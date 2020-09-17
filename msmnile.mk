@@ -497,3 +497,6 @@ PRODUCT_BOOT_JARS += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/sm8150
