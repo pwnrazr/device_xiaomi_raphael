@@ -217,6 +217,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_HOST_PACKAGES += \
     signapk
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libstdc++.vendor \
+    vndk-sp \
+    com.android.vndk.current.on_vendor
+
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml \
