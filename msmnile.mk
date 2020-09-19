@@ -140,7 +140,8 @@ PRODUCT_COPY_FILES += \
 # Codec2
 PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
-    libcodec2_hidl@1.0.vendor
+    libcodec2_hidl@1.0.vendor \
+    libavservices_minijail_vendor
 
 # Display
 PRODUCT_PACKAGES += \
