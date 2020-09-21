@@ -1,5 +1,5 @@
 #
-# Copyright 2020 Project 404
+# Copyright 2020 YAAP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
+    $(LOCAL_PATH)/overlay-yaap
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
