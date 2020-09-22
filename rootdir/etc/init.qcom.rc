@@ -42,6 +42,9 @@ on early-init
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dbgbus
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_vbif_dbgbus
 
+    #Disable UFS clock scaling
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
+
 on init
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
@@ -235,6 +238,8 @@ service vendor.ssr_setup /vendor/bin/ssr_setup
     oneshot
 
 on property:sys.boot_completed=1
+    #Enable UFS clock scaling back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     chown media audio /sys/kernel/wdsp0/boot
 
     start qcom-post-boot
