@@ -1019,10 +1019,6 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 
-# Media - from coral - coral-user-11-RP1A.200720.009-6720564-release-keys
-vendor/etc/seccomp_policy/codec2.vendor.base.policy|05b0779b5da2ea640984d46a46a796edeaab5fab
-vendor/etc/seccomp_policy/codec2.vendor.ext.policy|061ee7133e9649d72006d64034536f8775397667
-
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc
