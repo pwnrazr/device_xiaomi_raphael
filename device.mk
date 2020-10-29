@@ -404,7 +404,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson \
     libril \
-    librilutils
+    librilutils \
+    librmnetctl
 
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
