@@ -4,4 +4,4 @@ allow system_app hal_lineage_camera_motor_default:binder { call transfer };
 allow system_app sysfs_leds:dir { search };
 allow system_app vendor_sysfs_graphics:dir { search };
 allow system_app vendor_sysfs_graphics:file rw_file_perms;
-allow system_app hal_pasrmanager_qti:binder call;
+allow system_app vendor_hal_pasrmanager_qti:binder call;
