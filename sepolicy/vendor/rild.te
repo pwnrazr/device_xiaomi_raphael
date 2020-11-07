@@ -1,1 +1,2 @@
 allow rild default_prop:file read;
+get_prop(rild, default_prop)
