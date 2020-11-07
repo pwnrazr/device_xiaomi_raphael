@@ -48,3 +48,6 @@
 
 #Android NN Driver
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti                      u:object_r:vendor_hal_neuralnetworks_default_exec:s0
+
+#DPM
+/(product|system/product)/bin/dpmd                                                                     u:object_r:vendor_dpmd_exec:s0
