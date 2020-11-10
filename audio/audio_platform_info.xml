@@ -58,6 +58,11 @@
         <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="10012"/>
         <device name="SND_DEVICE_IN_USB_REALIME_LOOPBACK_MIC" acdb_id="10019"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_KARA" acdb_id="10020"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_NS" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC_NS" acdb_id="143"/>
     </acdb_ids>
 
     <module_ids>
