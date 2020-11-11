@@ -385,13 +385,13 @@ product/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 vendor/bin/qseecomd
 vendor/lib/libcpion.so
 vendor/lib/libQSEEComAPI.so
-vendor/lib/liboemcrypto.so
+vendor/lib/liboemcrypto.so|7a8be0a1b2b6f7441c658dd1a1550510c8c154ee
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/liboemcrypto.so
+vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
