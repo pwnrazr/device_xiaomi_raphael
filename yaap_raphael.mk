@@ -18,8 +18,8 @@ $(call inherit-product, device/xiaomi/raphael/msmnile.mk)
 # Inherit some common YAAP stuff.
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
+#Boot Animation
+scr_resolution := 1080
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := yaap_raphael
