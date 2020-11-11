@@ -86,8 +86,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 
 # Bluetooth-AptX -from Coral
-product/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
-product/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+product/lib64/libaptXHD_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+product/lib64/libaptX_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -262,7 +262,6 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libHalSuperSensorServer.so
 vendor/lib64/libmialgoengine.so
-vendor/lib64/libmialgo_basic.so
 vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
@@ -1023,9 +1022,6 @@ vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 # Media - from coral - coral-user-11-RP1A.200720.009-6720564-release-keys
 vendor/etc/seccomp_policy/codec2.vendor.base.policy|05b0779b5da2ea640984d46a46a796edeaab5fab
 vendor/etc/seccomp_policy/codec2.vendor.ext.policy|061ee7133e9649d72006d64034536f8775397667
-
-# Soter
--app/SoterService/SoterService.apk
 
 # WiFi Display
 bin/wfdservice
