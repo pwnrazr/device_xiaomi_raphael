@@ -423,19 +423,19 @@ vendor/lib64/libwvhidl.so|68d257f6c4b409f71f80c231789d9951f71308a8
 vendor/lib/libprotobuf-cpp-lite-3.9.1.so|e9c5b0cbf6d122994933b444b40eebfea79f8831
 vendor/lib64/libprotobuf-cpp-lite-3.9.1.so|1c11443407566308d993c7b34cfd82370287074d
 
-# Display-Hardware (from LA.UM.8.1.r1-13500-sm8150.0)
-vendor/lib64/libdisp-aba.so|a7f8975e5a323100bb9e5feb14085c0c4479ce96
-vendor/lib64/libdisplayqos.so|8e5f13a5b7ea0efa8db2902c8719380d710bc857
-vendor/lib64/libhdr_tm.so|4f08d65045893e0ec2b351581d6378f2e187ca82
-vendor/lib64/libqseed3.so|3fb480721b26a2df0a2a96359814ef37a5da9148
-vendor/lib64/libsdedrm.so|1a6d6ac050678dbc2b7d724ff7c642e4946b573b
-vendor/lib64/libsdm-color.so|76967da4af05736649eab5568f59861a16be33bd
-vendor/lib64/libsdm-colormgr-algo.so|5f497ba10168722455b0a3b80e7e3dca85e00c8f
-vendor/lib64/libsdm-diag.so|1044fd68ba610d08d7a02765a95563cc90dd5a54
-vendor/lib64/libsdm-disp-vndapis.so|6f4fd3a5a253ec4dff787de1ad6e67d07e921d94
-vendor/lib64/libsdmextension.so|fc9994028e62ed31223b9a494c4bf4a469b855a9
-vendor/lib64/libtinyxml.so|6b469580f781995a2e78fe1b5c19930040a8798e
-vendor/lib64/libtinyxml2_1.so|92adc9b612766cda6fa50f4c36d046b1a6da0816
+# SDM - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/lib64/libdisp-aba.so|b7c8567c3079372479c85834ba1aab4e2eee5522
+vendor/lib64/libdisplayqos.so|13aa5350813e6b3b619ba26a4854e512302e2d97
+vendor/lib64/libhdr_tm.so|e4638c3bf21685b84650c5858bafe384ab2118ff
+vendor/lib64/libqseed3.so|1395834daf3c6cd07acbdbc44110decb3be362c2
+vendor/lib64/libsdedrm.so|499fda5345019fdd2fc305fd70ff81f17acb7f2c
+vendor/lib64/libsdm-color.so|9a5a5f27481ef8c29624dc18819442ec2764726e
+vendor/lib64/libsdm-colormgr-algo.so|11b65733d87ff65633a5fe8f4207dde12391625c
+vendor/lib64/libsdm-diag.so|55dafc05ba68666f10412a534f7122d7f45bf403
+vendor/lib64/libsdm-disp-vndapis.so|9ab6725a5efba29b77d1d6ab33e10e3ff3296960
+vendor/lib64/libsdmextension.so|37b50b7865770f4f4ad9540b9fe2b73da554ecae
+vendor/lib64/libtinyxml.so|1fc14ef18aa90ddf62e7ced53da91d1bc264e47b
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|9e5b1931b0c971561afff5ecb6a2e57518997003
@@ -606,49 +606,49 @@ vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/libjnihelper.so
 
-# Media
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/lib/libdsd2pcm.so
-vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libmulawdec.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxMux_proprietary.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libvppclient.so
-vendor/lib/libvpphcp.so
-vendor/lib/libvpphvx.so
-vendor/lib/libvpplibrary.so
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/libMpeg4SwEncoder.so
-vendor/lib64/libmulawdec.so
-vendor/lib64/libvppclient.so
-vendor/lib64/libvpphcp.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvpplibrary.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so
+# Media - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|711fc86b6a7768ba844155b61debdda4e291767e
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
+vendor/lib/libdsd2pcm.so|427be2997fcd72e94c33d08b2cf1fde5bf969fd4
+vendor/lib/libMpeg4SwEncoder.so|2ff27b13674b465166ab25938116a882a27430d8
+vendor/lib/libmulawdec.so|53257dee0befc2a353ceb84a906a680a33d745f1
+vendor/lib/libOmxAacDec.so|5d53a6407f46cdde7d420fbe10a37373b0053704
+vendor/lib/libOmxAlacDec.so|286272d63737fa4f9930913b9ee8f116b4fb8f24
+vendor/lib/libOmxAlacDecSw.so|9c455d01e8f3f8663c464b9980e57ad735959529
+vendor/lib/libOmxAmrDec.so|d06aff2857f5a716b036a5655f391f7539ee0ee1
+vendor/lib/libOmxAmrwbplusDec.so|85247fca7f64c08a53eb48b443443a3b892235d7
+vendor/lib/libOmxApeDec.so|3520930fca2ee05a2ce3e76b1d71bdbb6e9fb1f6
+vendor/lib/libOmxApeDecSw.so|281c7f2ea570dab8d1ae73a385b62ad015a6dbf9
+vendor/lib/libOmxDsdDec.so|2ed9ab0f0768c8cfd223762e09fb73a4e92423b0
+vendor/lib/libOmxEvrcDec.so|394fdd9569f3dbd2484a456432640c25005fff77
+vendor/lib/libOmxG711Dec.so|de4774eacbb34f3fd681bb2c8469c6406653e123
+vendor/lib/libswvdec.so|01a01ac0456ce24acba9f61259975cf702925100
+vendor/lib/libOmxQcelp13Dec.so|58370cbd70146383d766efc6cf945b07d9ffaa89
+vendor/lib/libOmxVpp.so|2f743b78f20928198c4d479580b0a3409190b981
+vendor/lib/libOmxWmaDec.so|a8b216fd308b307e4ad5c32ec804aec437be94ff
+vendor/lib/libvppclient.so|16af46b1995d6e7fff08ad1aa2de2c15b53e0735
+vendor/lib/libvpphcp.so|ab4aa61da810416255e184fc9d0cd5ae32fb7f80
+vendor/lib/libvpphvx.so|530c8e40e403524e3a8102ad993f180355eabc8e
+vendor/lib/libvpplibrary.so|991ab5282e84f44b9e83c79dd0f32a554a9f436f
+vendor/lib/vendor.qti.hardware.vpp@1.1.so|8df356bc93951b2072590ff17c5d7af08b4e8299
+vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c730
+vendor/lib64/libMpeg4SwEncoder.so|9197ade83f762c2dc955954141be23d53a1bc2e2
+vendor/lib64/libmulawdec.so|8a114d91458cee68b32186afe1a4b6315c0ffcd9
+vendor/lib64/libvppclient.so|2e379fee2c6513a7e00f0918d958c7c0d64c11f1
+vendor/lib64/libvpphcp.so|0bd9a46e74d64dab42668e4289353e905e48d7d5
+vendor/lib64/libvpphvx.so|3091aa5f01d3b23bb22518e5984733234e61dbbd
+vendor/lib64/libvpplibrary.so|26c02780487b89843d9aba1f15373e66ba26e9a5
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|f7769685d9c0c74f8c8419db028a5d5c3f65a9da
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308e6cf
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|99f7054e5a0e9eb214e27cf034785bc446187e20
 
-# Media-Hardware
-vendor/lib/libarbitrarybytes.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
--vendor/lib/libplatformconfig.so
-vendor/lib/libstagefrighthw.so
--vendor/lib64/libplatformconfig.so
+# Media-Hardware - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/lib/libarbitrarybytes.so|664782a1e45ade77ce893877b5b5d06bb559c87c
+vendor/lib/libOmxSwVdec.so|6a6be9a282c0101134de7685c96e103ad51c17cb
+vendor/lib/libOmxSwVencMpeg4.so|9daf4c33c65fc8cc2ae73bdb5bd080001ad89e07
+-vendor/lib/libplatformconfig.so|bf2a1c8282be231e18068a958ef208caf5b7fff3
+vendor/lib/libstagefrighthw.so|1d034b00a66804b1808ee039ef8940db5eccf4e8
+-vendor/lib64/libplatformconfig.so|b9b83d47020405a2fe88743036502b8de6a797f9
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
