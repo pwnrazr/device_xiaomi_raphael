@@ -115,6 +115,17 @@ vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 
+# Configstore - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|8a64779e1a5df5153f10871cf23c65c3f7f94ae7
+vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|3e355ba4be40f42ae02bbc791757268f8c2e6ad9
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|3e517ec6b4603c6c1f5945b3f131aa69bccb0b08
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|eb1a99915765fca7add8de87d7c4ef9bf031e155
+-vendor/lib64/libplatformconfig.so|b9b83d47020405a2fe88743036502b8de6a797f9
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|a4173f7af5a0a4ea09f89cc06ecb9374dec1653d
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|cca6f5f8bb798633d5a425876ed29155be06321f
+
 # CNE_Profiles
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -648,7 +659,7 @@ vendor/lib/libOmxSwVdec.so|6a6be9a282c0101134de7685c96e103ad51c17cb
 vendor/lib/libOmxSwVencMpeg4.so|9daf4c33c65fc8cc2ae73bdb5bd080001ad89e07
 -vendor/lib/libplatformconfig.so|bf2a1c8282be231e18068a958ef208caf5b7fff3
 vendor/lib/libstagefrighthw.so|1d034b00a66804b1808ee039ef8940db5eccf4e8
--vendor/lib64/libplatformconfig.so|b9b83d47020405a2fe88743036502b8de6a797f9
+
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
@@ -945,13 +956,11 @@ vendor/bin/nv_mac
 # Misc
 -vendor/app/pasrservice/pasrservice.apk
 vendor/bin/adpl
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/bin/ipacm-diag
 vendor/bin/sscrpcd
 vendor/bin/vppservice
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
-vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/hdr_config.cfg
 vendor/etc/init/cnd.rc
@@ -970,7 +979,6 @@ vendor/etc/init/ipa_fws.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.adsprpc-service.rc
-vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/etc/init/vppservice.rc
 vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
@@ -989,7 +997,6 @@ vendor/lib/libspkrprot.so
 vendor/lib/libqsap_sdk.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/libalAILDC.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalhLDC.so
@@ -1012,7 +1019,6 @@ vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
-vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 
 # WiFi Display - from qssi_NX627J-user-11-RKQ1.200826.002-nubia.20201029.204053-release-keys
 -framework/WfdCommon.jar|aa7470dd5ccb2e2c695fd54c3aff01d21e2d7472
