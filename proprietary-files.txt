@@ -562,10 +562,10 @@ vendor/lib64/libllvm-qcom.so|ccaf5c49196fb4ea6b5329ecec79dd6252f1b988
 vendor/lib64/libOpenCL.so|d6bb350254707592d6f6360c06d4c3336f8f1155
 
 
-# HotwordEnrollment - from crosshatch RP1A.201105.002
--product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk|71893b977c2e4ebadac8d0d314a49fa99e58de98
--product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk|f8b9161c2573fdf69d2227c44e4fd71fbf479950
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|714382db8d12aca9f5388dd72060e867e30d88e4
+# HotwordEnrollment - from qssi-user-11-RP1A.201005.001-2010150042-release-keys
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|9fbc18b83c6f4c308dc736295b902d3894e7538b
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|3dca2fc2f805e47612f8b0240fe8fcae13e70eca
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
 
 # IP CAM
 vendor/bin/ipacm
