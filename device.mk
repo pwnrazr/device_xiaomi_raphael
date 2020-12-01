@@ -264,6 +264,7 @@ PRODUCT_PACKAGES += \
     init.mi.usb.sh \
     init.recovery.qcom.rc \
     init.raphael.rc \
+    init.raphael.wlan.rc \
     init.target.rc \
     ueventd.qcom.rc
 
