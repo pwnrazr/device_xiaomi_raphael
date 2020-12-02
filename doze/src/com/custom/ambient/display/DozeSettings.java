@@ -32,11 +32,13 @@ import static com.custom.ambient.display.Utils.AMBIENT_DISPLAY_KEY;
 import static com.custom.ambient.display.Utils.GESTURE_HAND_WAVE_KEY;
 import static com.custom.ambient.display.Utils.GESTURE_POCKET_KEY;
 import static com.custom.ambient.display.Utils.PICK_UP_KEY;
+import static com.custom.ambient.display.Utils.WAKE_ON_GESTURE_KEY;
 import static com.custom.ambient.display.Utils.enableDoze;
 import static com.custom.ambient.display.Utils.enableHandWave;
 import static com.custom.ambient.display.Utils.enablePickUp;
 import static com.custom.ambient.display.Utils.enablePocketMode;
 import static com.custom.ambient.display.Utils.isDozeEnabled;
+import static com.custom.ambient.display.Utils.wakeOnGesture;
 
 public class DozeSettings extends PreferenceActivity {
 
@@ -56,6 +58,7 @@ public class DozeSettings extends PreferenceActivity {
         private SwitchPreference mPickUpPreference;
         private SwitchPreference mHandwavePreference;
         private SwitchPreference mPocketPreference;
+        private SwitchPreference mWakeOnGesturePreference;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -81,6 +84,9 @@ public class DozeSettings extends PreferenceActivity {
 
             mPocketPreference = (SwitchPreference) findPreference(GESTURE_POCKET_KEY);
             mPocketPreference.setOnPreferenceChangeListener(this);
+
+            mWakeOnGesturePreference = (SwitchPreference) findPreference(WAKE_ON_GESTURE_KEY);
+            mWakeOnGesturePreference.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -107,6 +113,10 @@ public class DozeSettings extends PreferenceActivity {
             } else if (GESTURE_POCKET_KEY.equals(key)) {
                 mPocketPreference.setChecked(value);
                 enablePocketMode(value, mContext);
+                return true;
+            } else if (WAKE_ON_GESTURE_KEY.equals(key)) {
+                mWakeOnGesturePreference.setChecked(value);
+                wakeOnGesture(value, mContext);
                 return true;
             }
             return false;
