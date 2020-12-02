@@ -407,3 +407,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/kgsl/kgsl-3d0    force_bus_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    force_clk_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    bus_split                0664    root  system
+
+# HBM
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary	hbm				0660	system	system

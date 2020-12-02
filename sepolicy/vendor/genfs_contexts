@@ -7,3 +7,6 @@ genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-003b/power_supply/idt u:
 
 # FlickerFree
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                          u:object_r:vendor_sysfs_graphics:s0
+
+# HBM
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                       u:object_r:vendor_sysfs_graphics:s0
