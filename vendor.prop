@@ -100,10 +100,6 @@ vendor.audio_hal.period_size=192
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=false
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.vendor.btstack.connect.peer_earbud=true
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
@@ -160,9 +156,6 @@ persist.dbg.wfc_avail_ovr=1
 # Memory
 ro.vendor.qti.va_aosp.support=1
 
-#Media
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-
 # Property to enable/disable PASR
 vendor.power.pasr.enabled=true
 
@@ -170,13 +163,6 @@ vendor.power.pasr.enabled=true
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # RIL
-persist.radio.apm_sim_not_pwdn=1
-persist.radio.dynamic_sar=false
-persist.radio.multisim.config=dsds
-persist.radio.NO_STAPA=1
-persist.radio.sar_sar_sensor=true
-persist.radio.VT_HYBRID_ENABLE=1
-persist.sys.fflag.override.settings_network_and_internet_v2=true
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=
@@ -190,15 +176,8 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.uspsensor=default
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # SurfaceFlinger
 debug.sf.early_phase_offset_ns=500000
 debug.sf.early_app_phase_offset_ns=500000
 debug.sf.early_gl_phase_offset_ns=3000000
 debug.sf.early_gl_app_phase_offset_ns=15000000
-	
-# WFD
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
