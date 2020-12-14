@@ -160,7 +160,6 @@ vendor/bin/remosaic_daemon
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
-vendor/lib/libswvdec.so
 vendor/lib64/camera/com.qti.sensor.imx586_raphael.so
 vendor/lib64/camera/com.qti.sensor.ov8856_raphael.so
 vendor/lib64/camera/com.qti.sensor.s5k3l6_raphael.so
@@ -288,7 +287,6 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libSuperSensor.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libswvdec.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libVDClearShot.so
@@ -633,7 +631,7 @@ vendor/lib/libOmxApeDecSw.so|281c7f2ea570dab8d1ae73a385b62ad015a6dbf9
 vendor/lib/libOmxDsdDec.so|2ed9ab0f0768c8cfd223762e09fb73a4e92423b0
 vendor/lib/libOmxEvrcDec.so|394fdd9569f3dbd2484a456432640c25005fff77
 vendor/lib/libOmxG711Dec.so|de4774eacbb34f3fd681bb2c8469c6406653e123
-vendor/lib/libswvdec.so|67c611c3d613612716de3469fcfdfec20446d789
+vendor/lib/libswvdec.so|01a01ac0456ce24acba9f61259975cf702925100
 vendor/lib/libOmxQcelp13Dec.so|58370cbd70146383d766efc6cf945b07d9ffaa89
 vendor/lib/libOmxVpp.so|2f743b78f20928198c4d479580b0a3409190b981
 vendor/lib/libOmxWmaDec.so|a8b216fd308b307e4ad5c32ec804aec437be94ff
@@ -645,6 +643,7 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so|8df356bc93951b2072590ff17c5d7af08b4e82
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c730
 vendor/lib64/libMpeg4SwEncoder.so|9197ade83f762c2dc955954141be23d53a1bc2e2
 vendor/lib64/libmulawdec.so|8a114d91458cee68b32186afe1a4b6315c0ffcd9
+vendor/lib64/libswvdec.so|888b704def0068f0ec882aa5227ba78bec56d522
 vendor/lib64/libvppclient.so|2e379fee2c6513a7e00f0918d958c7c0d64c11f1
 vendor/lib64/libvpphcp.so|0bd9a46e74d64dab42668e4289353e905e48d7d5
 vendor/lib64/libvpphvx.so|3091aa5f01d3b23bb22518e5984733234e61dbbd
