@@ -163,6 +163,12 @@ on boot
 
     setprop init.svc.console stopped
 
+    # Enable qcrild and data services
+    enable vendor.qcrild
+    enable vendor.qcrild2
+    enable vendor.dataqti
+    enable vendor.dataadpl
+
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
@@ -245,12 +251,6 @@ on post-fs-data
 
     # Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
-
-    # Start qcrild and data services
-    start vendor.qcrild
-    start vendor.qcrild2
-    start vendor.dataqti
-    start vendor.dataadpl
 
     setprop vold.post_fs_data_done 1
 
