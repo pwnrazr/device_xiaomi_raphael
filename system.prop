@@ -83,3 +83,7 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # WiFi
 wifi.interface=wlan0
+
+# Transcoding related property.
+debug.media.transcoding.codec_max_operating_rate_720P=240
+debug.media.transcoding.codec_max_operating_rate_1080P=120
