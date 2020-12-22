@@ -22,13 +22,10 @@
 
 #include <fstream>
 
-//#define BLUE_LED        "/sys/class/leds/blue/"  //Right LED
 #define GREEN_LED       "/sys/class/leds/green/"  //Left LED
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
-#define DELAY_OFF       "delay_off"
-#define DELAY_ON        "delay_on"
 
 #define MAX_LED_BRIGHTNESS    255
 #define MAX_LCD_BRIGHTNESS    2047
@@ -74,10 +71,11 @@ static uint32_t getBrightness(const LightState& state) {
 }
 
 static inline uint32_t scaleBrightness(uint32_t brightness, uint32_t maxBrightness) {
+
     if (brightness == 0) {
         return 0;
     }
-
+    
     return (brightness - 1) * (maxBrightness - 1) / (0xFF - 1) + 1;
 }
 
@@ -92,16 +90,16 @@ static void handleNotification(const LightState& state) {
     /* Disable breathing or blinking */
 
     set(GREEN_LED BREATH, 0);
-    set(GREEN_LED DELAY_OFF, 0);
-    set(GREEN_LED DELAY_ON, 0);
+    set(GREEN_LED BRIGHTNESS, 0);
+
+	if (!greenBrightness) {
+        return;
+    }
 
     switch (state.flashMode) {
         case Flash::HARDWARE:
-            /* Breathing */  
-            set(GREEN_LED BREATH, 1);
-            break;
         case Flash::TIMED:
-            /* Blinking */
+            /* Breathing */
             set(GREEN_LED BREATH, 1);
             break;
         case Flash::NONE:
