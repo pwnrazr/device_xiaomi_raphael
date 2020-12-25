@@ -135,11 +135,12 @@ vendor/etc/init/cnd.rc
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|8a64779e1a5df5153f10871cf23c65c3f7f94ae7
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|3e355ba4be40f42ae02bbc791757268f8c2e6ad9
+-vendor/lib/libplatformconfig.so|bf2a1c8282be231e18068a958ef208caf5b7fff3
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|3e517ec6b4603c6c1f5945b3f131aa69bccb0b08
+vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|a4173f7af5a0a4ea09f89cc06ecb9374dec1653d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|eb1a99915765fca7add8de87d7c4ef9bf031e155
 -vendor/lib64/libplatformconfig.so|b9b83d47020405a2fe88743036502b8de6a797f9
-vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so|a4173f7af5a0a4ea09f89cc06ecb9374dec1653d
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|3e355ba4be40f42ae02bbc791757268f8c2e6ad9
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so|cca6f5f8bb798633d5a425876ed29155be06321f
 
 # CNE_Profiles
@@ -435,7 +436,7 @@ vendor/lib64/libsi.so|15654096a6c36ee2894f3d9c8134444f05789171
 vendor/lib64/libspl.so|0fa8c0711f72fc8a914dce044cf8dddd79ee62e1
 vendor/lib64/libssd.so|87556d685d37f77f212d45a8e5ce13c64f162d78
 vendor/lib64/libStDrvInt.so|095780183be2789198974e1bbe833ccd1b5f33dc
-vendor/etc/init/qseecomd.rc
+vendor/etc/init/qseecomd.rc|3e596c60490756388a5bd56378a91d0db7c3779b
 
 # DRM-Widevine - from qssi_NX627J-user-11-RKQ1.200826.002-nubia.20201029.204053-release-keys
 vendor/lib/libbase64.so|fb77cc69b5244f0da46dfa14f2ff8225260871a6
@@ -647,14 +648,21 @@ vendor/lib/libmulawdec.so|53257dee0befc2a353ceb84a906a680a33d745f1
 vendor/lib/libsmwrapper.so|e68b476ab54c68be6fc8dc2e35ea7936ca669586
 
 # Media - from LA.UM.9.1.r1-07300-SMxxx0.0
-vendor/bin/vppservice
-vendor/etc/init/vppservice.rc
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|711fc86b6a7768ba844155b61debdda4e291767e
+vendor/bin/vppservice|55039efdfcd2d837d76fff9b442470d10cffce89
+vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
-vendor/lib/libdsd2pcm.so|427be2997fcd72e94c33d08b2cf1fde5bf969fd4
+vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
+vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
+vendor/lib64/libvpphvx.so|3091aa5f01d3b23bb22518e5984733234e61dbbd
+vendor/lib64/libvpplibrary.so|26c02780487b89843d9aba1f15373e66ba26e9a5
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|f7769685d9c0c74f8c8419db028a5d5c3f65a9da
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308e6cf
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|99f7054e5a0e9eb214e27cf034785bc446187e20
+vendor/lib64/libqcodec2.so|423e01a8a722c0712b31a26d6e66f6e21a287666
+vendor/lib/libmmosal.so|57185feced72009af2df1b09117702c9fae7182b
 vendor/lib/libMpeg4SwEncoder.so|2ff27b13674b465166ab25938116a882a27430d8
-vendor/lib/libmulawdec.so|53257dee0befc2a353ceb84a906a680a33d745f1
-vendor/lib/libmmparser_lite_proprietary.so
+vendor/lib/libdsd2pcm.so|427be2997fcd72e94c33d08b2cf1fde5bf969fd4
 vendor/lib/libOmxAacDec.so|5d53a6407f46cdde7d420fbe10a37373b0053704
 vendor/lib/libOmxAlacDec.so|286272d63737fa4f9930913b9ee8f116b4fb8f24
 vendor/lib/libOmxAlacDecSw.so|9c455d01e8f3f8663c464b9980e57ad735959529
@@ -664,37 +672,20 @@ vendor/lib/libOmxApeDec.so|3520930fca2ee05a2ce3e76b1d71bdbb6e9fb1f6
 vendor/lib/libOmxApeDecSw.so|281c7f2ea570dab8d1ae73a385b62ad015a6dbf9
 vendor/lib/libOmxDsdDec.so|2ed9ab0f0768c8cfd223762e09fb73a4e92423b0
 vendor/lib/libOmxEvrcDec.so|394fdd9569f3dbd2484a456432640c25005fff77
-vendor/lib/libOmxG711Dec.so|de4774eacbb34f3fd681bb2c8469c6406653e123
-vendor/lib/libswvdec.so|01a01ac0456ce24acba9f61259975cf702925100
 vendor/lib/libOmxQcelp13Dec.so|58370cbd70146383d766efc6cf945b07d9ffaa89
+vendor/lib/libOmxSwVdec.so|6a6be9a282c0101134de7685c96e103ad51c17cb
+vendor/lib/libOmxSwVencMpeg4.so|9daf4c33c65fc8cc2ae73bdb5bd080001ad89e07
 vendor/lib/libOmxVpp.so|2f743b78f20928198c4d479580b0a3409190b981
 vendor/lib/libOmxWmaDec.so|a8b216fd308b307e4ad5c32ec804aec437be94ff
+vendor/lib/libqcodec2.so|25be46d8bc16ba2b88310dea1ea6e4ab25cbe1fa
+vendor/lib/libswvdec.so|01a01ac0456ce24acba9f61259975cf702925100
 vendor/lib/libvppclient.so|16af46b1995d6e7fff08ad1aa2de2c15b53e0735
-vendor/lib/libvpphcp.so|ab4aa61da810416255e184fc9d0cd5ae32fb7f80
 vendor/lib/libvpphvx.so|530c8e40e403524e3a8102ad993f180355eabc8e
 vendor/lib/libvpplibrary.so|991ab5282e84f44b9e83c79dd0f32a554a9f436f
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|8df356bc93951b2072590ff17c5d7af08b4e8299
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c730
-vendor/lib/libqcodec2.so
-vendor/lib64/libMpeg4SwEncoder.so|9197ade83f762c2dc955954141be23d53a1bc2e2
-vendor/lib64/libmulawdec.so|8a114d91458cee68b32186afe1a4b6315c0ffcd9
-vendor/lib64/libmmparser_lite_proprietary.so
-vendor/lib64/libswvdec.so|888b704def0068f0ec882aa5227ba78bec56d522
-vendor/lib64/libvppclient.so|2e379fee2c6513a7e00f0918d958c7c0d64c11f1
-vendor/lib64/libvpphcp.so|0bd9a46e74d64dab42668e4289353e905e48d7d5
-vendor/lib64/libvpphvx.so|3091aa5f01d3b23bb22518e5984733234e61dbbd
-vendor/lib64/libvpplibrary.so|26c02780487b89843d9aba1f15373e66ba26e9a5
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so|f7769685d9c0c74f8c8419db028a5d5c3f65a9da
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308e6cf
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so|99f7054e5a0e9eb214e27cf034785bc446187e20
-vendor/lib64/libqcodec2.so
-
-# Media-Hardware - from LA.UM.9.1.r1-07300-SMxxx0.0
-vendor/lib/libarbitrarybytes.so|664782a1e45ade77ce893877b5b5d06bb559c87c
-vendor/lib/libOmxSwVdec.so|6a6be9a282c0101134de7685c96e103ad51c17cb
-vendor/lib/libOmxSwVencMpeg4.so|9daf4c33c65fc8cc2ae73bdb5bd080001ad89e07
--vendor/lib/libplatformconfig.so|bf2a1c8282be231e18068a958ef208caf5b7fff3
-vendor/lib/libstagefrighthw.so|1d034b00a66804b1808ee039ef8940db5eccf4e8
+vendor/lib/vendor.qti.hardware.vpp@1.3.so|5daf9c261188ca05696002622509756d079177ca
+vendor/lib/libqcodec2.so|25be46d8bc16ba2b88310dea1ea6e4ab25cbe1fa
 
 
 # Neural-networks
@@ -1079,7 +1070,6 @@ vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f8
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy|f113f27e0e301a18baf0ade08c23071a27c7dc52
 vendor/etc/wfdconfig.xml|9e13371f7ae509cc0bbb3f2ace93c5ea5d87bf0f
 vendor/lib/libFileMux_proprietary.so|34d6727b02f1a7898e58451769a9db1151d4b872
-vendor/lib/libmmosal.so|bc3378f26f668c3060174a6abc8e7a640dd9730d
 vendor/lib/libmmrtpdecoder_proprietary.so|6961014e8c6bf6d239248e2eb00abab1f94591c2
 vendor/lib/libmmrtpencoder_proprietary.so|bb9b24108645b146045b3116d94b9a5ee7f99897
 vendor/lib/libwfdaac_vendor.so|dd6c4da4eeecfc69f87a48b2628cd4738ada3e5d

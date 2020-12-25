@@ -289,6 +289,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libarbitrarybytes \
     libc2dcolorconvert \
     libmm-omxcore \
     libOmxAacEnc \
