@@ -388,6 +388,24 @@ media/audio/ui/popup_yingyan_up.ogg
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 
+# Camera-Extra
+vendor/etc/camera/LDC_table_src2.dat
+vendor/etc/camera/MIUI_Time.ttf
+vendor/etc/camera/Miui-Light.ttf
+vendor/etc/camera/Roboto-Thin.ttf
+vendor/etc/camera/female_bg.png
+vendor/etc/camera/female_icon.png
+vendor/etc/camera/fonts.xml
+vendor/etc/camera/golden_rear_dc_cal_wu.bin
+vendor/etc/camera/hdr_ui9_params.config
+vendor/etc/camera/male_bg.png
+vendor/etc/camera/male_icon.png
+vendor/etc/camera/score_bg.png
+vendor/etc/camera/score_icon.png
+vendor/etc/camera/visidon_clearshot_params_algoup.xml
+vendor/etc/camera/watermark_font_2300_3199.dat
+vendor/lib64/libnanopb.so
+
 # Charger
 vendor/bin/hvdcp_opti
 
