@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/xiaomi/raphael/msmnile.mk)
+$(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common YAAP stuff.
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
