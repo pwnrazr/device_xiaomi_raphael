@@ -58,7 +58,6 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libhdmiedid.so
