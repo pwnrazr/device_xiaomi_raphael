@@ -603,13 +603,6 @@ vendor/lib64/libpvr.so|cbbe058bf1acb4d688086a33d59a8023d6a24799
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|3dca2fc2f805e47612f8b0240fe8fcae13e70eca
 system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
 
-# IP CAM
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
-vendor/etc/IPACM_cfg.xml
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
-
 # IPA-Firmware
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
