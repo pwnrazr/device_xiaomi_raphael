@@ -82,6 +82,10 @@ vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 # Audio-Hardware
 vendor/lib/hw/audio.primary.msmnile.so
 
+# Audio amplifier firmware
+vendor/firmware/tfa98xx.cnt
+vendor/firmware/mono.cnt
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
@@ -540,7 +544,6 @@ vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
-vendor/firmware/tfa98xx.cnt
 
 # FM
 lib64/fm_helium.so
@@ -731,7 +734,6 @@ vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
 vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
 vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
-
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
@@ -1055,7 +1057,6 @@ vendor/lib64/libthermalclient.so
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 vendor/etc/init/init.time_daemon.rc
-
 
 # WiFi
 vendor/bin/cnss-daemon
