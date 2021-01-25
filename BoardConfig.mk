@@ -110,10 +110,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # FM
 BOARD_HAVE_QCOM_FM := true
 
-# FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.xiaomi_raphael
-TARGET_USES_FOD_ZPOS := true
-
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
@@ -193,6 +189,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+
+# Udfps
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_raphael
+TARGET_USES_FOD_ZPOS := true
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael

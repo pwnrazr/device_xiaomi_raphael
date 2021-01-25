@@ -167,7 +167,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
