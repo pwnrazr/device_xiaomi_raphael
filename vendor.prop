@@ -110,6 +110,9 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
 	
 # Data modules
 persist.vendor.data.mode=concurrent

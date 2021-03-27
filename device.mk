@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_32 \
     libavservices_minijail.vendor \
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
