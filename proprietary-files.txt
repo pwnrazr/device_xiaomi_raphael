@@ -478,10 +478,6 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff1906
 vendor/lib64/libwvhidl.so|68d257f6c4b409f71f80c231789d9951f71308a8
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 
-# Protobuf-cpp-lite - from sunfish RP1A.200720.010
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so|e9c5b0cbf6d122994933b444b40eebfea79f8831
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so|1c11443407566308d993c7b34cfd82370287074d
-
 # SDM - from LA.UM.9.1.r1-07300-SMxxx0.0
 vendor/lib64/libdisp-aba.so|b7c8567c3079372479c85834ba1aab4e2eee5522
 vendor/lib64/libdisplayqos.so|13aa5350813e6b3b619ba26a4854e512302e2d97
