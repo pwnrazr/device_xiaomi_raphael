@@ -106,6 +106,10 @@ on boot
     write /sys/class/thermal/thermal_message/sconfig 10
 
 on property:sys.boot_completed=1
+
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.zram
+
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sda/queue/nr_requests 128
