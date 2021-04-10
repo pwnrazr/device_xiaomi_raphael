@@ -36,6 +36,7 @@
 #include <loc_cfg.h>
 
 #define GLONASS_SV_ID_OFFSET 64
+#define SBAS_SV_ID_OFFSET    (87)
 #define QZSS_SV_ID_OFFSET    (192)
 #define BDS_SV_ID_OFFSET     (200)
 #define GALILEO_SV_ID_OFFSET (300)
@@ -114,7 +115,7 @@
 typedef struct loc_nmea_sv_meta_s
 {
     char talker[3];
-    LocGnssConstellationType svType;
+    uint32_t svTypeMask;
     uint64_t mask;
     uint32_t svCount;
     uint32_t totalSvUsedCount;
@@ -293,6 +294,7 @@ static uint32_t convert_signalType_to_signalId(GnssSignalTypeMask signalType)
 
     switch (signalType) {
         case GNSS_SIGNAL_GPS_L1CA:
+        case GNSS_SIGNAL_SBAS_L1:
             signalId = SIGNAL_ID_GPS_L1CA;
             break;
         case GNSS_SIGNAL_GPS_L2:
@@ -405,7 +407,7 @@ static loc_nmea_sv_meta* loc_nmea_sv_meta_init(loc_nmea_sv_meta& sv_meta,
                                                bool needCombine)
 {
     memset(&sv_meta, 0, sizeof(sv_meta));
-    sv_meta.svType = svType;
+    sv_meta.svTypeMask = (1 << svType);
 
     switch (svType)
     {
@@ -414,6 +416,7 @@ static loc_nmea_sv_meta* loc_nmea_sv_meta_init(loc_nmea_sv_meta& sv_meta,
             sv_meta.talker[1] = 'P';
             sv_meta.mask = sv_cache_info.gps_used_mask;
             sv_meta.systemId = SYSTEM_ID_GPS;
+            sv_meta.svTypeMask |= (1 << GNSS_SV_TYPE_SBAS);
             switch (signalType) {
                 case GNSS_SIGNAL_GPS_L1CA:
                     sv_meta.svCount = sv_cache_info.gps_l1_count;
@@ -643,7 +646,7 @@ static uint32_t loc_nmea_generate_GSA(const GpsLocationExtended &locationExtende
     uint32_t svIdOffset = sv_meta_p->svIdOffset;
     uint64_t mask = sv_meta_p->mask;
 
-    if(sv_meta_p->svType != GNSS_SV_TYPE_GLONASS) {
+    if (!(sv_meta_p->svTypeMask & (1 << GNSS_SV_TYPE_GLONASS))) {
         svIdOffset = 0;
     }
 
@@ -797,7 +800,7 @@ static void loc_nmea_generate_GSV(const GnssSvNotification &svNotify,
         return;
     }
 
-    if (GNSS_SV_TYPE_GLONASS == sv_meta_p->svType) {
+    if ((1 << GNSS_SV_TYPE_GLONASS) & sv_meta_p->svTypeMask) {
         svIdOffset = 0;
     }
     svNumber = 1;
@@ -855,14 +858,23 @@ static void loc_nmea_generate_GSV(const GnssSvNotification &svNotify,
                 }
             }
 
-            if (sv_meta_p->svType == svNotify.gnssSvs[svNumber - 1].type &&
+            if ((sv_meta_p->svTypeMask & (1 << svNotify.gnssSvs[svNumber - 1].type)) &&
                     sv_meta_p->signalId == convert_signalType_to_signalId(signalType))
             {
-                length = snprintf(pMarker, lengthRemaining,",%02d,%02d,%03d,",
+                if (GNSS_SV_TYPE_SBAS == svNotify.gnssSvs[svNumber - 1].type) {
+                    svIdOffset = SBAS_SV_ID_OFFSET;
+                }
+                if (GNSS_SV_TYPE_GLONASS == svNotify.gnssSvs[svNumber - 1].type &&
+                    GLO_SV_PRN_SLOT_UNKNOWN == svNotify.gnssSvs[svNumber - 1].svId) {
+                    length = snprintf(pMarker, lengthRemaining, ",,%02d,%03d,",
+                        (int)(0.5 + svNotify.gnssSvs[svNumber - 1].elevation), //float to int
+                        (int)(0.5 + svNotify.gnssSvs[svNumber - 1].azimuth)); //float to int
+                } else {
+                    length = snprintf(pMarker, lengthRemaining, ",%02d,%02d,%03d,",
                         svNotify.gnssSvs[svNumber - 1].svId - svIdOffset,
                         (int)(0.5 + svNotify.gnssSvs[svNumber - 1].elevation), //float to int
                         (int)(0.5 + svNotify.gnssSvs[svNumber - 1].azimuth)); //float to int
-
+                }
                 if (length < 0 || length >= lengthRemaining)
                 {
                     LOC_LOGE("NMEA Error in string formatting");
@@ -1492,7 +1504,7 @@ void loc_nmea_generate_pos(const UlpLocation &location,
             float magTrack = location.gpsLocation.bearing;
             if (locationExtended.flags & GPS_LOCATION_EXTENDED_HAS_MAG_DEV)
             {
-                float magTrack = location.gpsLocation.bearing - locationExtended.magneticDeviation;
+                magTrack = location.gpsLocation.bearing - locationExtended.magneticDeviation;
                 if (magTrack < 0.0)
                     magTrack += 360.0;
                 else if (magTrack > 360.0)
@@ -2137,14 +2149,15 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
 
     //Count GPS SVs for saparating GPS from GLONASS and throw others
     for (uint32_t svOffset = 0; svOffset < svNotify.count; svOffset++) {
-        if (GNSS_SV_TYPE_GPS == svNotify.gnssSvs[svOffset].type)
+        if ((GNSS_SV_TYPE_GPS == svNotify.gnssSvs[svOffset].type) ||
+            (GNSS_SV_TYPE_SBAS == svNotify.gnssSvs[svOffset].type))
         {
             if (GNSS_SIGNAL_GPS_L5 == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) {
                 sv_cache_info.gps_l5_count++;
             } else if (GNSS_SIGNAL_GPS_L2 == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) {
                 sv_cache_info.gps_l2_count++;
             } else {
-                // GNSS_SIGNAL_GPS_L1CA or default
+                // GNSS_SIGNAL_GPS_L1CA, GNSS_SIGNAL_SBAS_L1 or default
                 // If no signal type in report, it means default L1
                 sv_cache_info.gps_l1_count++;
             }
@@ -2185,6 +2198,14 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
         }
         else if (GNSS_SV_TYPE_BEIDOU == svNotify.gnssSvs[svOffset].type)
         {
+            // cache the used in fix mask, as it will be needed to send $PQGSA
+            // during the position report
+            if (GNSS_SV_OPTIONS_USED_IN_FIX_BIT ==
+                (svNotify.gnssSvs[svOffset].gnssSvOptionsMask &
+                  GNSS_SV_OPTIONS_USED_IN_FIX_BIT))
+            {
+                setSvMask(sv_cache_info.bds_used_mask, svNotify.gnssSvs[svOffset].svId);
+            }
             if ((GNSS_SIGNAL_BEIDOU_B2AI == svNotify.gnssSvs[svOffset].gnssSignalTypeMask) ||
                    (GNSS_SIGNAL_BEIDOU_B2AQ == svNotify.gnssSvs[svOffset].gnssSignalTypeMask)) {
                 sv_cache_info.bds_b2_count++;
@@ -2301,6 +2322,7 @@ void loc_nmea_generate_sv(const GnssSvNotification &svNotify,
     // -----------------------------
     // ------$GBGSV (BEIDOU:B1C)----
     // -----------------------------
+
     loc_nmea_generate_GSV(svNotify, sentence, sizeof(sentence),
             loc_nmea_sv_meta_init(sv_meta, sv_cache_info, GNSS_SV_TYPE_BEIDOU,
             GNSS_SIGNAL_BEIDOU_B1C, false), nmeaArraystr);
