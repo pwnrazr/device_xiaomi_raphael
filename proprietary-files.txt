@@ -105,6 +105,7 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
+vendor/lib/liba2dpoffload.so
 
 # Bluetooth (AptX) - from coral-user-11-RQ1A.201205.008-6943376-release-keys
 system_ext/lib64/libaptXHD_encoder.so
