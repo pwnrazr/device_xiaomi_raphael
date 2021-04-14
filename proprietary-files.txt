@@ -120,9 +120,9 @@ vendor/lib/libbluetooth_audio_session_qti.so|c2c5cf5a3ebef1746b6ee63aef9bb9fc68e
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|3302ba3bf89803f58e748266bd75849531ed3e25
 vendor/lib/liba2dpoffload.so|3ea2c123d7ab42bf8eccb90b6c7e94e7e86df65d
 
-# Bluetooth(AptX) - from coral-user-11-RQ1A.201205.008-6943376-release-keys
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+# Bluetooth(AptX)  - from raphael-user-11-RKQ1.200826.002-21.4.12-release-keys
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
 
 # Camera - from raphael-user-11-RKQ1.200826.002-21.4.12-release-keys
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64|d75fbf981881b05a9c35dec0937dd949d69a2eae
@@ -212,7 +212,7 @@ vendor/lib64/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib64/hw/camera.qcom.so|1e0e7dc85d09d3d58bfac322ec9f3d838bd45719
+vendor/lib64/hw/camera.qcom.so|a54cb692b1678ee6aef48b1a970a0f53ab429504
 vendor/lib64/hw/com.qti.chi.override.so|b08159c671b99e09e9f5f3c218ae994fdfd3c8fb
 vendor/lib64/libFaceGrade.so|b3f316c56ab78ec550e8248c8d3ae7ca720d009e
 vendor/lib64/libHalSuperSensorServer.so|59e7bd40acf52610a62c5ade0cb3083e2a09f6ff
