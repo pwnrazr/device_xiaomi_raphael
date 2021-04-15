@@ -420,8 +420,8 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
 vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
 
-# Display (QCDM) - from raphaelin V12.0.4.0.QFKINXM
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|9e5b1931b0c971561afff5ecb6a2e57518997003
+# Display (QCDM) - from hentaiOS
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|46a4ad209cc6ec3e8726e0611973c4b5a789bbfd
 
 # DPM
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
