@@ -687,19 +687,31 @@ vendor/lib64/libspcom.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msmnile.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2vop.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/libmulawdec.so
-vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.msmnile.so
+# Listen  - from raphael-user-11-RKQ1.200826.002-21.4.12-release-keys
+vendor/etc/sound_trigger_mixer_paths.xml|6f86d5de7911408e8c73182aea212117139ea8c6
+vendor/etc/sound_trigger_mixer_paths_wcd9340.xml|93699359ec9ebe5f62a32837edcfb166be4ee779
+vendor/etc/sound_trigger_mixer_paths_wcd9340_qrd.xml|8bb4449ca78bfe5bd78ffa539771e2b6a86842f9
+vendor/etc/sound_trigger_platform_info.xml|94ac38676cf78cb6ec4657a106f2aa88138965f2
+vendor/lib/hw/sound_trigger.primary.msmnile.so|54af3ce9df03f35b9c4958c1d866c4cb890a4d0d
+vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
+vendor/lib/libcapiv2svacnn.so|10271e9d5a32377740292bcf27f35098ee65fb5b
+vendor/lib/libcapiv2vop.so|ffde544a5b8b4db988e92308568a84caad80518e
+vendor/lib/libgcs-calwrapper.so|e558907aacf4d613741900cc611f3195d0d4dfc7
+vendor/lib/libgcs-ipc.so|53c5708904d3d6358a49dbb928be68fc5b2c12ce
+vendor/lib/libgcs-osal.so|c8055991809da427b5fdf0b18b67cefc7b17a399
+vendor/lib/libgcs.so|fcaa2bfe5498e561a6b50373bac8c2652979638e
+vendor/lib/liblistensoundmodel2.so|8e5d795988c666c7d8c42653d6eab231bb5952cc
+vendor/lib/libmulawdec.so|4ad85b4982bf0cfed77c9bede75aac09a51ab062
+vendor/lib/libsmwrapper.so|2dac5988fc325dc990f33053dc2e289865c6ee65
+vendor/lib64/hw/sound_trigger.primary.msmnile.so|7b52dfe739d7f9cd27e192f71edb3a2b6f591620
+vendor/lib64/libcapiv2svacnn.so|2feddde9dfee7ba606b72266d1b42e95d0e03c70
+vendor/lib64/libcapiv2vop.so|23a80adfacbfe48b8b4b57d74b3f4f847447ddf5
+vendor/lib64/libgcs-calwrapper.so|4eb7ddde7d8d7259fa4aadb2d0491a38c45fabd5
+vendor/lib64/libgcs-ipc.so|e6b4380ad312feaf0fec872f3975737c1eaa8edb
+vendor/lib64/libgcs-osal.so|59ab5c733b8ded09a79dd6e233536c965ed0887c
+vendor/lib64/libgcs.so|c121a2e993912ba3de28e2c3db0e2bb581a3a48c
+vendor/lib64/liblistensoundmodel2.so|53303a1046d4684e8d5c13104f30a73b2ad414dc
+vendor/lib64/libmulawdec.so|75298ca84a46f99b47e5a5ecc21b22a54d65c52c
 
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
