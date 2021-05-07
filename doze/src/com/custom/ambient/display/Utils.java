@@ -25,7 +25,6 @@ import android.hardware.SensorManager;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.UserHandle;
-import android.provider.Settings;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
@@ -37,7 +36,6 @@ public final class Utils {
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
-    protected static final String AMBIENT_DISPLAY_KEY = "ambient_display";
     protected static final String PICK_UP_KEY = "pick_up";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
@@ -67,11 +65,6 @@ public final class Utils {
         context.stopService(new Intent(context, DozeService.class));
     }
 
-    protected static boolean isDozeEnabled(Context context) {
-        return Settings.Secure.getInt(context.getContentResolver(),
-                Settings.Secure.DOZE_ENABLED, 1) != 0;
-    }
-
     protected static boolean pickUpEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(PICK_UP_KEY, false);
@@ -90,13 +83,6 @@ public final class Utils {
     protected static boolean isWakeOnGestureEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(WAKE_ON_GESTURE_KEY, false);
-    }
-
-    protected static boolean enableDoze(boolean enable, Context context) {
-        boolean enabled = Settings.Secure.putInt(context.getContentResolver(),
-                Settings.Secure.DOZE_ENABLED, enable ? 1 : 0);
-        // don't start the service, for notifications pulse we don't need the proximity sensor check here
-        return enabled;
     }
 
     protected static boolean enablePickUp(boolean enable, Context context) {

@@ -17,12 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreference
-        android:key="ambient_display"
-        android:defaultValue="true"
-        android:title="@string/ambient_display_title"
-        android:summary="@string/ambient_display_summary" />
-
-    <SwitchPreference
         android:key="wake_on_gesture"
         android:defaultValue="false"
         android:title="@string/wake_on_gesture_title"

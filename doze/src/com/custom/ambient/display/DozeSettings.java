@@ -28,16 +28,13 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-import static com.custom.ambient.display.Utils.AMBIENT_DISPLAY_KEY;
 import static com.custom.ambient.display.Utils.GESTURE_HAND_WAVE_KEY;
 import static com.custom.ambient.display.Utils.GESTURE_POCKET_KEY;
 import static com.custom.ambient.display.Utils.PICK_UP_KEY;
 import static com.custom.ambient.display.Utils.WAKE_ON_GESTURE_KEY;
-import static com.custom.ambient.display.Utils.enableDoze;
 import static com.custom.ambient.display.Utils.enableHandWave;
 import static com.custom.ambient.display.Utils.enablePickUp;
 import static com.custom.ambient.display.Utils.enablePocketMode;
-import static com.custom.ambient.display.Utils.isDozeEnabled;
 import static com.custom.ambient.display.Utils.wakeOnGesture;
 
 public class DozeSettings extends PreferenceActivity {
@@ -54,7 +51,6 @@ public class DozeSettings extends PreferenceActivity {
 
         private Context mContext;
 
-        private SwitchPreference mAmbientDisplayPreference;
         private SwitchPreference mPickUpPreference;
         private SwitchPreference mHandwavePreference;
         private SwitchPreference mPocketPreference;
@@ -70,11 +66,6 @@ public class DozeSettings extends PreferenceActivity {
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
             }
-
-            mAmbientDisplayPreference = (SwitchPreference) findPreference(AMBIENT_DISPLAY_KEY);
-            // Read from DOZE_ENABLED secure setting
-            mAmbientDisplayPreference.setChecked(isDozeEnabled(mContext));
-            mAmbientDisplayPreference.setOnPreferenceChangeListener(this);
 
             mPickUpPreference = (SwitchPreference) findPreference(PICK_UP_KEY);
             mPickUpPreference.setOnPreferenceChangeListener(this);
@@ -98,11 +89,7 @@ public class DozeSettings extends PreferenceActivity {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             final String key = preference.getKey();
             final boolean value = (Boolean) newValue;
-            if (AMBIENT_DISPLAY_KEY.equals(key)) {
-                mAmbientDisplayPreference.setChecked(value);
-                enableDoze(value, mContext);
-                return true;
-            } else if (PICK_UP_KEY.equals(key)) {
+            if (PICK_UP_KEY.equals(key)) {
                 mPickUpPreference.setChecked(value);
                 enablePickUp(value, mContext);
                 return true;
