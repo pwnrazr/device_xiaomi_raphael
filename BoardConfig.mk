@@ -128,6 +128,10 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/c2_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+ODM_MANIFEST_SKUS += raphael
+ODM_MANIFEST_RAPHAEL_FILES := \
+    $(DEVICE_PATH)/manifest-nfc.xml
+
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
