@@ -1,0 +1,12 @@
+
+
+cc_library_shared {
+    name: "libshim_camera",
+    srcs: ["camera_shim.cpp"],
+    shared_libs: [
+        "libui",
+        "libutils",
+    ],
+
+    proprietary: true,
+}
