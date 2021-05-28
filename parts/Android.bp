@@ -1,0 +1,33 @@
+//
+// Copyright (C) 2017-2019 The LineageOS Project
+// Copyright (C) 2021 Yet Another AOSP Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "XiaomiParts",
+
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "vendor.xiaomi.hardware.motor-V1.0-java",
+        "org.lineageos.settings.resources",
+    ],
+
+    resource_dirs: ["res"],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
