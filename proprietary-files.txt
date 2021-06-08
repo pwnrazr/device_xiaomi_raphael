@@ -425,6 +425,10 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e70fda0288
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
+# Display (Postprocessing) (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
+vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
+
 # DPM (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
 framework/tcmclient.jar|60fc12be7581c89cbdc3a5ba0526b423af492baa
 system_ext/bin/dpmd|b11102e06c7e169b3da762a0db408cb8e16d7b01
@@ -618,6 +622,9 @@ vendor/lib64/libgsl.so|b16047039badc627763014839ae6d379987a9779
 vendor/lib64/libllvm-glnext.so|c32e43fad7c41071c736ccc0daf311c3d72e52ef
 vendor/lib64/libllvm-qcom.so|6c19eabb6f1ed256bcc07cfd8596c48b968d4e68
 vendor/lib64/libpvr.so|4ec5f223df1e2849dbe67687e293653406b6939e
+
+# Graphics (HDR) (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+vendor/lib64/libhdr_tm.so|a222a7d838735c5ce73f06d4096fea3ca19611c8
 
 # Hotword Enrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
@@ -962,19 +969,15 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|38a159f3e564dccbfb9d5170ea2ce8da49c
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|ca8afe08d6244cc9fdfcc38ca950fafa4b147625
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
-# SDM (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
-vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
-vendor/lib64/libhdr_tm.so|a222a7d838735c5ce73f06d4096fea3ca19611c8
-vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
-vendor/lib64/libsdedrm.so|5cf6147a8b33bb9ae4b99e6ba923d0be32295768
-vendor/lib64/libsdm-color.so|d0984c33dcbf84940676917e0c3584b0ccfeaf03
-vendor/lib64/libsdm-colormgr-algo.so|15f696a4575868e528360896f1e0098d531899c0
-vendor/lib64/libsdm-diag.so|341907510d377127adb98d07e7d9f30448d08def
-vendor/lib64/libsdm-disp-vndapis.so|60da199073d2b0881bf075190a644b332503f39c
-vendor/lib64/libsdmextension.so|e10d29f29b7a53b75369e58e8a165b2b86609f26
-vendor/lib64/libtinyxml.so|842e68b9ec9c011f862e311ef2b8a26ebd46dca6
-vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
+# SDM (vendor) - from hanoip RRI31.Q1-42-24-4
+vendor/lib64/libqseed3.so|1395834daf3c6cd07acbdbc44110decb3be362c2
+vendor/lib64/libsdedrm.so|bccd71afeb56529b457699bdd179d571830caa16
+vendor/lib64/libsdm-color.so|e82ee94b86f9c59044017ab527261a7aacbd6083
+vendor/lib64/libsdm-colormgr-algo.so|11b65733d87ff65633a5fe8f4207dde12391625c
+vendor/lib64/libsdm-diag.so|55dafc05ba68666f10412a534f7122d7f45bf403
+vendor/lib64/libsdm-disp-vndapis.so|9ab6725a5efba29b77d1d6ab33e10e3ff3296960
+vendor/lib64/libsdmextension.so|c1425aae0475207054351c2bf16c18350ccf7570
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Sensor
 vendor/bin/sensors.qti
