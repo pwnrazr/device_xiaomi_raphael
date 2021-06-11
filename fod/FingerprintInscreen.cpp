@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,8 @@
 
 #include "FingerprintInscreen.h"
 
-#include <android-base/file.h>
 #include <android-base/logging.h>
-
-#include <chrono>
 #include <fstream>
-#include <thread>
 #include <cmath>
 
 #define FINGERPRINT_ACQUIRED_VENDOR 6
@@ -36,16 +32,9 @@
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
-#define DIM_LAYER_OFF_DELAY 85ms
-
 #define FOD_SENSOR_X 445
 #define FOD_SENSOR_Y 1931
 #define FOD_SENSOR_SIZE 190
-
-#define DIM_LAYER_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm"
-
-using ::android::base::WriteStringToFile;
-using namespace std::chrono_literals;
 
 namespace {
 
@@ -53,11 +42,6 @@ template <typename T>
 static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
-}
-
-// Write value to path and close file.
-bool WriteToFile(const std::string& path, uint32_t content) {
-    return WriteStringToFile(std::to_string(content), path);
 }
 
 } // anonymous namespace
@@ -97,7 +81,6 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 
 Return<void> FingerprintInscreen::onPress() {
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
-    WriteToFile(DIM_LAYER_HBM_PATH, 1);
     return Void();
 }
 
@@ -113,9 +96,7 @@ Return<void> FingerprintInscreen::onShowFODView() {
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
-    WriteToFile(DIM_LAYER_HBM_PATH, 0);
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
-    std::this_thread::sleep_for(DIM_LAYER_OFF_DELAY);
     this->mFodCircleVisible = false;
     return Void();
 }
