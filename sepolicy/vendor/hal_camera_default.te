@@ -16,3 +16,4 @@ binder_call(hal_camera_default, remosaic_daemon)
 
 # Allow hal_camera_default to read fastrpc_shell_3
 allow hal_camera_default public_adsprpcd_file:file r_file_perms;
+allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
