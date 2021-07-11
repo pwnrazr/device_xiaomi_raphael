@@ -91,8 +91,8 @@ void vendor_load_properties()
         property_override("ro.boot.product.hardware.sku", "raphael");
 
     // fingerprint
-    property_override("ro.build.description", "coral-user 11 RQ3A.210605.005 7349499 release-keys");
-    property_override_multi("ro.build.fingerprint", "ro.vendor.build.fingerprint","ro.bootimage.build.fingerprint", "google/coral/coral:11/RQ3A.210605.005/7349499:user/release-keys");
+    property_override("ro.build.description", "coral-user 11 RQ3A.210705.001 7380771 release-keys");
+    property_override_multi("ro.build.fingerprint", "ro.vendor.build.fingerprint","ro.bootimage.build.fingerprint", "google/coral/coral:11/RQ3A.210705.001/7380771:user/release-keys");
 
     load_dalvikvm_properties();
 }
