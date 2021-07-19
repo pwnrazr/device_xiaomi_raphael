@@ -6,3 +6,5 @@ allow init proc:file { setattr write };
 # /proc/last_kmsg
 allow init proc_last_kmsg:file r_file_perms;
 allow init proc_last_kmsg:file setattr;
+
+allow init adsprpcd_file:file mounton;
