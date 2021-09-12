@@ -99,11 +99,6 @@ case "$target" in
     echo 10 > /proc/sys/kernel/sched_group_downmigrate
     echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-    # cpuset parameters
-    echo 0-1 > /dev/cpuset/background/cpus
-    echo 0-2 > /dev/cpuset/system-background/cpus
-    echo 0-3 > /dev/cpuset/restricted/cpus
-
     # Setup final blkio
     # value for group_idle is us
     echo 1000 > /dev/blkio/blkio.weight
