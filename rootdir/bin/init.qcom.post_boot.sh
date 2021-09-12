@@ -92,13 +92,6 @@ function configure_memory_parameters() {
 
 case "$target" in
     "msmnile")
-    # Setting b.L scheduler parameters
-    echo 95 95 > /proc/sys/kernel/sched_upmigrate
-    echo 85 85 > /proc/sys/kernel/sched_downmigrate
-    echo 100 > /proc/sys/kernel/sched_group_upmigrate
-    echo 10 > /proc/sys/kernel/sched_group_downmigrate
-    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
-
     # Setup final blkio
     # value for group_idle is us
     echo 1000 > /dev/blkio/blkio.weight
