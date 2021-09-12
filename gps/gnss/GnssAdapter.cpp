@@ -1,4 +1,4 @@
-/* Copyright (c) 2017-2020 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017-2021 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -5256,8 +5256,7 @@ void GnssAdapter::dataConnOpenCommand(
     };
     // Added inital length checks for apnlen check to avoid security issues
     // In case of failure reporting the same
-    if (NULL == apnName || apnLen <= 0 || apnLen > MAX_APN_LEN ||
-            (strlen(apnName) != (unsigned)apnLen)) {
+    if (NULL == apnName || apnLen > MAX_APN_LEN || (strlen(apnName) != apnLen)) {
         LOC_LOGe("%s]: incorrect apnlen length or incorrect apnName", __func__);
         mAgpsManager.reportAtlClosed(agpsType);
     } else {
@@ -6731,7 +6730,9 @@ GnssAdapter::reportGnssAntennaInformation(const antennaInfoCb antennaInfoCallbac
         }
         gnssAntennaInformations.push_back(std::move(gnssAntennaInfo));
     }
-    antennaInfoCallback(gnssAntennaInformations);
+    if (antennaInfoVectorSize > 0) {
+        antennaInfoCallback(gnssAntennaInformations);
+    }
 }
 
 /* ==== DGnss Usable Reporter ========================================================= */
@@ -6768,10 +6769,15 @@ void GnssAdapter::enablePPENtripStreamCommand(const GnssNtripConnectionParams& p
                                               bool enableRTKEngine) {
 
     (void)enableRTKEngine; //future parameter, not used
+    if (0 == params.size || params.hostNameOrIp.empty() || params.mountPoint.empty() ||
+            params.username.empty() || params.password.empty()) {
+        LOC_LOGe("Ntrip parameters are invalid!");
+        return;
+    }
 
     struct enableNtripMsg : public LocMsg {
         GnssAdapter& mAdapter;
-        const GnssNtripConnectionParams& mParams;
+        const GnssNtripConnectionParams mParams;
 
         inline enableNtripMsg(GnssAdapter& adapter,
                 const GnssNtripConnectionParams& params) :
