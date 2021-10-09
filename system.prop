@@ -60,6 +60,7 @@ persist.rcs.supported=1
 
 # RIL
 DEVICE_PROVISIONED=1
+persist.sys.fflag.override.settings_provider_model=false
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.force_on_dc=true
 ril.subscription.types=RUIM
