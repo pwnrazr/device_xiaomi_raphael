@@ -471,7 +471,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
 # Vibrator HAL
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
 
 # Vulkan
 PRODUCT_PACKAGES += \
