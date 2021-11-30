@@ -110,16 +110,6 @@ vendor.qcom.bluetooth.soc=cherokee
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
 
-# Dalvik
-pm.dexopt.boot=verify
-pm.dexopt.first-boot=verify
-pm.dexopt.install=speed-profile
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.image-dex2oat-threads=8
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.dex2oat64.enabled=true
-	
 # Data modules
 persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true

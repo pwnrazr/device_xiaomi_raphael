@@ -1,5 +1,5 @@
 #
-# Copyright 2020 YAAP
+# Copyright 2021 YAAP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -124,12 +124,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libavservices_minijail_32 \
     libavservices_minijail.vendor 
-
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat64.enabled=true
-
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # Component overrides
 PRODUCT_COPY_FILES += \
