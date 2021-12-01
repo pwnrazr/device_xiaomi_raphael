@@ -795,19 +795,12 @@ vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|bc906abd03e4a243201dde626b6580fd8a4f73ce
 
 # Radio
--system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/app/datastatusnotification/datastatusnotification.apk
--system_ext/app/embms/embms.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
-system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/telephonyservice.xml
-system_ext/framework/embmslibrary.jar
 system_ext/framework/qcrilhook.jar
-system_ext/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
