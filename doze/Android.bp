@@ -1,6 +1,10 @@
 android_app {
     name: "XiaomiCustomDoze",
 
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+
     static_libs: [
         "androidx.preference_preference",
     ],

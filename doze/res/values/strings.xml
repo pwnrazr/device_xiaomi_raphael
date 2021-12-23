@@ -13,7 +13,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Ambient settings -->
     <string name="ambient_display_custom_title">Custom options</string>
+    <string name="ambient_enable">Use ambient display</string>
 
     <!-- Tilt sensor -->
     <string name="tilt_sensor_title">Tilt sensor</string>

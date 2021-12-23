@@ -17,12 +17,9 @@
 
 package com.custom.ambient.display;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
-import android.view.MenuItem;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
@@ -37,13 +34,16 @@ import static com.custom.ambient.display.Utils.enablePickUp;
 import static com.custom.ambient.display.Utils.enablePocketMode;
 import static com.custom.ambient.display.Utils.wakeOnGesture;
 
-public class DozeSettings extends PreferenceActivity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class DozeSettings extends CollapsingToolbarBaseActivity {
 
     @Override
     protected void onCreate(final Bundle bundle) {
         super.onCreate(bundle);
         if (bundle == null) {
-            getFragmentManager().beginTransaction().replace(android.R.id.content, new DozeSettingsFragment()).commit();
+            getFragmentManager().beginTransaction().replace(R.id.content_frame, new DozeSettingsFragment()).commit();
         }
     }
 
@@ -61,11 +61,6 @@ public class DozeSettings extends PreferenceActivity {
             setPreferencesFromResource(R.xml.doze_settings, rootKey);
 
             mContext = getActivity();
-
-            ActionBar actionBar = getActivity().getActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-            }
 
             mPickUpPreference = (SwitchPreference) findPreference(PICK_UP_KEY);
             mPickUpPreference.setOnPreferenceChangeListener(this);
@@ -108,15 +103,6 @@ public class DozeSettings extends PreferenceActivity {
             }
             return false;
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            goUpToTopLevelSetting(this);
-            return true;
-        }
-        return false;
     }
 
     public static void goUpToTopLevelSetting(Activity activity) {
