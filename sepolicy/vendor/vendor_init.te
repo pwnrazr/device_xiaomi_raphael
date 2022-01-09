@@ -1,2 +1,4 @@
 # Allow vendor_init to set vendor_camera_prop
 set_prop(vendor_init, vendor_camera_prop)
+
+allow vendor_init block_device:lnk_file { setattr };

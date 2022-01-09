@@ -34,3 +34,6 @@ persist.vendor.setWFDInfo.               u:object_r:vendor_wfd_sys_debug_prop:s0
 
 # Xiaomi thermal daemon
 sys.thermal.                             u:object_r:thermal_normal_prop:s0
+
+# Sensors
+persist.sensor.sardisable   u:object_r:vendor_sensors_prop:s0
