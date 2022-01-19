@@ -15,10 +15,14 @@
 */
 -->
 <resources>
+    <!-- Padding of the statusbar -->
+    <dimen name="status_bar_padding_start">10dp</dimen>
+    <dimen name="status_bar_padding_end">10dp</dimen>
+
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_content_padding">12dp</dimen>
-    <dimen name="system_icons_keyguard_padding_end">4dp</dimen>
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+    <dimen name="system_icons_keyguard_padding_end">8dp</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">95px</dimen>
