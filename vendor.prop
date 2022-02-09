@@ -68,6 +68,10 @@ vendor.qcom.bluetooth.soc=cherokee
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
 
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+
 # Data modules
 persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
