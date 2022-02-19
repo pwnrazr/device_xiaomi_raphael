@@ -15,14 +15,12 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_raphael u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile                                   u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                             u:object_r:hal_lineage_camera_motor_default_exec:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                             u:object_r:hal_motor_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.xiaomi_msmnile                 u:object_r:hal_thermal_default_exec:s0
 
 # Motor
-/dev/akm09970                                                                                          u:object_r:akm09970_device:s0
-/dev/drv8846_dev                                                                                       u:object_r:drv8846_device:s0
-/sys/class/leds/blue/brightness                                                                        u:object_r:sysfs_oem:s0
-/sys/class/leds/green/brightness                                                                       u:object_r:sysfs_oem:s0
+/dev/akm09970                                                                                          u:object_r:hall_device:s0
+/dev/drv8846_dev                                                                                       u:object_r:motor_device:s0
 
 # Remosaic
 /vendor/bin/remosaic_daemon                                                                            u:object_r:remosaic_daemon_exec:s0
