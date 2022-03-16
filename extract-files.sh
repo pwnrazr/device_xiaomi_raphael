@@ -60,6 +60,9 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_camera.so" "${2}"
             ;;
+        system_ext/lib64/libwfdnative.so)
+            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+            ;;
     esac
 }
 
