@@ -258,13 +258,12 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.mi.usb.sh \
     init.recovery.qcom.rc \
     init.raphael.rc \
     init.target.rc \
     ueventd.qcom.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh \
 
 # IPACM
 PRODUCT_PACKAGES += \

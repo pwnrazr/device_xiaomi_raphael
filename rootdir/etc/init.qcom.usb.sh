@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -33,7 +33,13 @@ soc_hwplatform=`cat /sys/devices/soc0/hw_platform 2> /dev/null`
 soc_machine=`cat /sys/devices/soc0/machine 2> /dev/null`
 soc_machine=${soc_machine:0:2}
 soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
+
+#
+# Allow USB enumeration with default PID/VID
+#
+baseband=`getprop ro.baseband`
 debuggable=`getprop ro.debuggable`
+buildvariant=`getprop ro.build.type`
 
 #
 # Check ESOC for external modem
@@ -44,12 +50,14 @@ esoc_name=`cat /sys/bus/esoc/devices/esoc0/esoc_name 2> /dev/null`
 
 target=`getprop ro.board.platform`
 
-if [ -f /sys/class/android_usb/f_mass_storage/lun/nofua ]; then
-	echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
-fi
-
 # Clear vendor USB config because it is only needed for debugging
 setprop persist.vendor.usb.config ""
+
+# This check is needed for GKI 1.0 targets where QDSS is not available
+if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,adb" -a \
+     ! -d /config/usb_gadget/g1/functions/qdss.qdss ]; then
+      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
+fi
 
 # Start peripheral mode on primary USB controllers for Automotive platforms
 case "$soc_machine" in
@@ -65,21 +73,9 @@ case "$soc_machine" in
     ;;
 esac
 
-# set rndis transport to BAM2BAM_IPA for 8920 and 8940
-if [ "$target" == "msm8937" ]; then
-	if [ ! -d /config/usb_gadget ]; then
-	   case "$soc_id" in
-		"313" | "320")
-		   echo BAM2BAM_IPA > /sys/class/android_usb/android0/f_rndis_qc/rndis_transports
-		;;
-		*)
-		;;
-	   esac
-	fi
-fi
-
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
+
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then
@@ -96,8 +92,16 @@ if [ -d /config/usb_gadget ]; then
 		setprop sys.usb.config $persist_comp
 	fi
 
-	setprop sys.usb.configfs 1
 	setprop vendor.usb.configfs 1
+	setprop sys.usb.configfs 1
+fi
+
+# update product
+marketname=`getprop ro.product.marketname`
+if [ "$marketname" != "" ]; then
+    setprop vendor.usb.product_string "$marketname"
+else
+    setprop vendor.usb.product_string "$(getprop ro.product.model)"
 fi
 
 #
