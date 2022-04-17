@@ -1,5 +1,5 @@
 #
-# Copyright 2021 YAAP
+# Copyright 2022 YAAP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -141,16 +141,23 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    vendor.qti.hardware.display.allocator-service
+    vendor.qti.hardware.display.allocator-service \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor \
+    libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
+    libqdMetaData \
+    libqdMetaData.system \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.graphics.mapper@3.0-impl-qti-display
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0 \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor
 
 PRODUCT_PACKAGES += \
     gralloc.msmnile \
