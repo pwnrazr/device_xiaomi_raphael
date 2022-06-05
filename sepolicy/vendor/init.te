@@ -8,3 +8,7 @@ allow init proc_last_kmsg:file r_file_perms;
 allow init proc_last_kmsg:file setattr;
 
 allow init adsprpcd_file:file mounton;
+
+# Thermal
+allow vendor_init thermal_link_device:dir r_dir_perms;
+allow vendor_init thermal_link_device:lnk_file r_file_perms;
