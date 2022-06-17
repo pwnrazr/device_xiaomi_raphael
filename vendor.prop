@@ -49,6 +49,12 @@ ro.vendor.audio.soundtrigger.xatx.gmm.user.level.high=10
 ro.vendor.audio.soundtrigger.xatx.cnn.level.high=27
 ro.vendor.audio.soundtrigger.xatx.vop.level.high=10
 
+# App launch prefetching (IORapd)
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
