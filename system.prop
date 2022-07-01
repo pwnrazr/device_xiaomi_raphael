@@ -16,6 +16,7 @@ persist.vendor.camera.enableTOFInterface=TRUE
 persist.vendor.camera.mfnrframenum=8
 persist.vendor.camera.multicam=TRUE
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+log.tag.CHIUSECASE=ERROR
 
 # Charger
 ro.charger.enable_suspend=true
