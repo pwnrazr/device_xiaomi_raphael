@@ -73,6 +73,7 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
+persist.vendor.camera.perflock.enable=0
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
