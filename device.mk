@@ -446,6 +446,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_camera
 
+# Shim
+PRODUCT_PACKAGES += \
+    libwatermark_shim
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
