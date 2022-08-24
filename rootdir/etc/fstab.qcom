@@ -35,6 +35,7 @@
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
 system                                                  /system                  erofs    ro                                         wait,logical,first_stage_mount
 vendor                                                  /vendor                  erofs    ro                                         wait,logical,first_stage_mount
+/dev/block/by-name/vbmeta                               /vbmeta                  emmc    defaults                                             first_stage_mount
 
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/by-name/metadata                  		/metadata                ext4    noatime,nosuid,nodev,discard,data=journal,commit=1                         wait,formattable,check,first_stage_mount
