@@ -789,7 +789,6 @@ vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
 vendor/etc/perf/perfconfigstore.xml|62f780c6f974a62d18a66d0dcee30efb04903512
 vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
 vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
-vendor/etc/msm_irqbalance.conf|0141a3e34175f62a3ae1f0f44cca94cf7043f2de
 vendor/lib64/libappclassifier.so|0a3f393ceb33ca37a3ee7c608997807589f88418
 vendor/lib64/liblearningmodule.so|c2d6d757998b560c3217fa76fb94ce274c6c0601
 vendor/lib64/libmeters.so|7e9cb43ee0133e4ae19e7e639535f99b169ed7c2
