@@ -99,6 +99,11 @@ case "$target" in
     echo 10 > /proc/sys/kernel/sched_group_downmigrate
     echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
+    # cpuset parameters
+    echo 0-1 > /dev/cpuset/background/cpus
+    echo 0-2 > /dev/cpuset/system-background/cpus
+    echo 0-3 > /dev/cpuset/restricted/cpus
+
     # Configure governor settings for silver cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
