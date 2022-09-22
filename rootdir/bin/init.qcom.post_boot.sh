@@ -92,6 +92,13 @@ function configure_memory_parameters() {
 
 case "$target" in
     "msmnile")
+    # Setting b.L scheduler parameters
+    echo 95 95 > /proc/sys/kernel/sched_upmigrate
+    echo 85 85 > /proc/sys/kernel/sched_downmigrate
+    echo 100 > /proc/sys/kernel/sched_group_upmigrate
+    echo 10 > /proc/sys/kernel/sched_group_downmigrate
+    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+
     # Configure governor settings for silver cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
