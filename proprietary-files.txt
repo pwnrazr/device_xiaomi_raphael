@@ -836,7 +836,7 @@ vendor/etc/init/ipacm-diag.rc|e3cee56d2e3ca6bf9aafb827827ebea369fc2897
 vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
-vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
+vendor/etc/init/vendor.qti.rmt_storage.rc|cece6e63944f94ec6bd4d8458ef4cc9c2e54b683
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 vendor/lib64/libconfigdb.so|5982429b716c7aecf6082eaf267dc23e7929ec69
 vendor/lib64/libdsi_netctrl.so|5a13e27ac990e5c8bc0e5087fab2271eec78e7b0
