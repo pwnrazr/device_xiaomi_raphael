@@ -35,7 +35,7 @@ import static com.custom.ambient.display.Utils.enablePocketMode;
 import static com.custom.ambient.display.Utils.wakeOnGesture;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+import com.android.settingslib.widget.R;
 
 public class DozeSettings extends CollapsingToolbarBaseActivity {
 
