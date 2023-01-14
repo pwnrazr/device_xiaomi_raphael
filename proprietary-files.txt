@@ -983,7 +983,6 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Sensor
 vendor/bin/sensors.qti
-vendor/etc/sensors/hals.conf
 vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
