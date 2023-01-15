@@ -185,7 +185,24 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
     ctx->device.batch = udfps_batch;
     ctx->device.flush = udfps_flush;
 
+    int retries = 0;
+
+    ALOGE("Attempt open fp state first");
     ctx->fd = open(udfps_pressed_path, O_RDONLY);
+    if (ctx->fd >= 0) {
+            ALOGE("Success open fp state on first try");
+        } else {
+            ALOGE("open fp state failed: %d, running while loop", -errno);
+        }
+
+    while (ctx->fd < 0) {
+        retries++;
+        ctx->fd = open(udfps_pressed_path, O_RDONLY);
+        if (ctx->fd >= 0) {
+            ALOGE("Success open fp state after %d retries", retries);
+            break;
+        }
+    }
 
     if (ctx->fd < 0) {
         ALOGE("Failed to open fp state: %d", -errno);
