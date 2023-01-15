@@ -187,6 +187,7 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
 
     int retries = 0;
 
+    sleep(1);
     ALOGE("Attempt open fp state first");
     ctx->fd = open(udfps_pressed_path, O_RDONLY);
     if (ctx->fd >= 0) {
@@ -197,6 +198,7 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
 
     while (ctx->fd < 0) {
         retries++;
+	usleep(500 * 1000);
         ctx->fd = open(udfps_pressed_path, O_RDONLY);
         if (ctx->fd >= 0) {
             ALOGE("Success open fp state after %d retries", retries);
