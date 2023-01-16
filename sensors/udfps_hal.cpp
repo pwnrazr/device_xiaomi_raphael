@@ -68,7 +68,7 @@ static int udfps_read_state(int fd) {
     if (rc > 0) {
         rc = sscanf(buf, "%d", &state);
         if (rc != 1) {
-            ALOGE("Failed to parse fp_state: %d", rc);
+            ALOGE("Failed to parse udfps_pressed: %d", rc);
             state = 0;
         }
     }
@@ -145,7 +145,7 @@ static int udfps_poll(struct sensors_poll_device_t* dev, sensors_event_t* data, 
     do {
         int rc = udfps_wait_event(ctx->fd, -1);
         if (rc < 0) {
-            ALOGE("Failed to poll fp_state: %d", -errno);
+            ALOGE("Failed to poll udfps_pressed: %d", -errno);
             return -errno;
         } else if (rc > 0) {
             fod_state = udfps_read_state(ctx->fd);
@@ -187,27 +187,18 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
 
     int retries = 0;
 
-    sleep(1);
-    ALOGE("Attempt open fp state first");
-    ctx->fd = open(udfps_pressed_path, O_RDONLY);
-    if (ctx->fd >= 0) {
-            ALOGE("Success open fp state on first try");
-        } else {
-            ALOGE("open fp state failed: %d, running while loop", -errno);
-        }
-
-    while (ctx->fd < 0) {
+    while (retries < 5) {
         retries++;
-	usleep(500 * 1000);
+        sleep(1);
         ctx->fd = open(udfps_pressed_path, O_RDONLY);
         if (ctx->fd >= 0) {
-            ALOGE("Success open fp state after %d retries", retries);
+            ALOGI("Success open udfps_pressed state after %d retries", retries);
             break;
         }
     }
 
     if (ctx->fd < 0) {
-        ALOGE("Failed to open fp state: %d", -errno);
+        ALOGE("Failed to open udfps_pressed state after %d retries: %d", retries, -errno);
         delete ctx;
 
         return -ENODEV;
