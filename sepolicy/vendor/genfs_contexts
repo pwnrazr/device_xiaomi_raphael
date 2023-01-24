@@ -50,5 +50,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup           
 genfscon sysfs /module/kprofiles/parameters/auto_kprofiles u:object_r:sysfs_kprofiles:s0
 genfscon sysfs /module/kprofiles/parameters/kp_mode u:object_r:sysfs_kprofiles:s0
 
-# udfps_pressed sensor
+# udfps sensor
 genfscon sysfs /devices/platform/goodix_ts.0/udfps_pressed u:object_r:vendor_sysfs_sensors:s0
+
+# double tap sensor
+genfscon sysfs /devices/platform/goodix_ts.0/double_tap_pressed u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/double_tap_enabled u:object_r:vendor_sysfs_sensors:s0
