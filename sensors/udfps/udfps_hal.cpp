@@ -17,6 +17,7 @@
 #include <utils/SystemClock.h>
 
 static const char *udfps_pressed_path = "/sys/devices/platform/goodix_ts.0/udfps_pressed";
+static const char *udfps_enabled_path = "/sys/devices/platform/goodix_ts.0/udfps_enabled";
 
 static struct sensor_t udfps_sensor = {
         .name = "UDFPS Sensor",
@@ -39,7 +40,7 @@ static struct sensor_t udfps_sensor = {
 
 struct udfps_context_t {
     sensors_poll_device_1_t device;
-    int fd;
+    int fd, fd_enable;
 };
 
 static int udfps_read_line(int fd, char* buf, size_t len) {
@@ -104,6 +105,7 @@ static int udfps_close(struct hw_device_t* dev) {
 
     if (ctx) {
         close(ctx->fd);
+        close(ctx->fd_enable);
         delete ctx;
     }
 
@@ -116,6 +118,8 @@ static int udfps_activate(struct sensors_poll_device_t* dev, int handle, int ena
     if (!ctx || handle) {
         return -EINVAL;
     }
+
+    write(ctx->fd_enable, enabled ? "1" : "0", 1);
 
     // Flush any pending events
     if (enabled) udfps_flush_events(ctx->fd);
@@ -202,6 +206,15 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
         delete ctx;
 
         return -ENODEV;
+    }
+
+    ctx->fd_enable = open(udfps_enabled_path, O_WRONLY);
+    if (ctx->fd_enable < 0) {
+        ALOGE("Failed to open udfps_enable: %d", -errno);
+        delete ctx;
+        return -ENODEV;
+    } else {
+        ALOGI("Success open udfps_enable");
     }
 
     *device = &ctx->device.common;
