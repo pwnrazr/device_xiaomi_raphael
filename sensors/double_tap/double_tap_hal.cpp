@@ -17,6 +17,7 @@
 #include <utils/SystemClock.h>
 
 static const char *double_tap_pressed_path = "/sys/devices/platform/goodix_ts.0/double_tap_pressed";
+static const char *double_tap_enabled_path = "/sys/devices/platform/goodix_ts.0/double_tap_enabled";
 
 static struct sensor_t double_tap_sensor = {
         .name = "dt2w Sensor",
@@ -39,7 +40,7 @@ static struct sensor_t double_tap_sensor = {
 
 struct double_tap_context_t {
     sensors_poll_device_1_t device;
-    int fd;
+    int fd, fd_enable;
 };
 
 static int double_tap_read_line(int fd, char* buf, size_t len) {
@@ -104,6 +105,7 @@ static int double_tap_close(struct hw_device_t* dev) {
 
     if (ctx) {
         close(ctx->fd);
+        close(ctx->fd_enable);
         delete ctx;
     }
 
@@ -116,6 +118,8 @@ static int double_tap_activate(struct sensors_poll_device_t* dev, int handle, in
     if (!ctx || handle) {
         return -EINVAL;
     }
+
+    write(ctx->fd_enable, enabled ? "1" : "0", 1);
 
     // Flush any pending events
     if (enabled) double_tap_flush_events(ctx->fd);
@@ -202,6 +206,15 @@ static int open_sensors(const struct hw_module_t* module, const char* /* name */
         delete ctx;
 
         return -ENODEV;
+    }
+
+    ctx->fd_enable = open(double_tap_enabled_path, O_WRONLY);
+    if (ctx->fd_enable < 0) {
+        ALOGE("Failed to open double_tap_enable: %d", -errno);
+        delete ctx;
+        return -ENODEV;
+    } else {
+        ALOGI("Success open double_tap_enable");
     }
 
     *device = &ctx->device.common;
