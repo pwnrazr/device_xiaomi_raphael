@@ -123,12 +123,13 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 const std::string kTsPath = "/sys/devices/platform/goodix_ts.0/";
 
 const std::string kTsDoubleTapPressedPath = kTsPath + "double_tap_pressed";
+const std::string kTsDoubleTapEnabledPath = kTsPath + "double_tap_enabled";
 
 class DoubleTapSensor : public SysfsPollingOneShotSensor {
   public:
     DoubleTapSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         : SysfsPollingOneShotSensor(
-              sensorHandle, callback, kTsDoubleTapPressedPath,
+              sensorHandle, callback, kTsDoubleTapPressedPath, kTsDoubleTapEnabledPath,
               "Double Tap Sensor", "org.yaap.sensor.double_tap",
               static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1)) {}
 };
