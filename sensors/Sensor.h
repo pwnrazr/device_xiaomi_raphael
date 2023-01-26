@@ -120,9 +120,9 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
     int mPollFd;
 };
 
-const std::string kTsPath = "/sys/touchpanel/";
+const std::string kTsPath = "/sys/devices/platform/goodix_ts.0/";
 
-const std::string kTsDoubleTapPressedPath = kTsPath + "double_tap";
+const std::string kTsDoubleTapPressedPath = kTsPath + "double_tap_pressed";
 
 class DoubleTapSensor : public SysfsPollingOneShotSensor {
   public:
