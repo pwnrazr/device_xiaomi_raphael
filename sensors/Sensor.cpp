@@ -236,7 +236,7 @@ SysfsPollingOneShotSensor::SysfsPollingOneShotSensor(
         mWaitPipeFd[1] = -1;
         ALOGE("failed to open wait pipe: %d", rc);
     }
-
+    ALOGE("sensors here trying to start!");
     mPollFd = open(pollPath.c_str(), O_RDONLY);
     if (mPollFd < 0) {
         ALOGE("failed to open poll fd: %d", mPollFd);
