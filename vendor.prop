@@ -95,7 +95,13 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
-	
+
+# Display post-processing
+ro.vendor.display.ad=1
+ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
+ro.vendor.display.sensortype=2
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
