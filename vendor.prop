@@ -95,6 +95,9 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+persist.sys.sf.color_saturation=1.0
+vendor.display.qdcm.mode_combine=1
+persist.sys.sf.native_mode=2
 
 # Display post-processing
 ro.vendor.display.ad=1
