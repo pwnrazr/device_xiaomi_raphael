@@ -1,2 +1,4 @@
 # KProfiles
 type sysfs_kprofiles, sysfs_type, fs_type;
+
+type proc_last_kmsg, fs_type, proc_type;
