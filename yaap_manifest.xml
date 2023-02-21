@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="pwnrazr"
+           fetch="https://github.com/pwnrazr" />
+
+  <remote name="yaosp"
+           fetch="https://gitlab.com/yaosp" />
+
+  <project path="device/xiaomi/raphael" remote="pwnrazr" name="device_xiaomi_raphael"  revision="thirteen" clone-depth="999" />
+  <project path="vendor/xiaomi/raphael" remote="pwnrazr" name="vendor_xiaomi_raphael" revision="thirteen" clone-depth="3" />
+  <project path="kernel/xiaomi/sm8150" remote="pwnrazr" name="kernel_raphael_sm8150" revision="inline-casefold-erofs" clone-depth="1"/>
+
+  <project path="vendor/qcom/common" remote="yaosp" name="vendor_qcom_common" revision="thirteen" clone-depth="1"/>
+  <project path="device/qcom/common" remote="yaap" name="device_qcom_common" revision="thirteen" clone-depth="1"/>
+
+  <extend-project path="system/core"
+          remote="pwnrazr"
+          name="system_core" />
+</manifest>
