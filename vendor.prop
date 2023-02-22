@@ -2,9 +2,6 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=1
-af.fast_track_multiplier=1
-audio.deep_buffer.media=true
-audio.offload.video=true
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
@@ -13,7 +10,6 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.voicecall.speaker.stereo=true
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
-ro.af.client_heap_size_kbyte=7168
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 ro.vendor.audio.sdk.fluencetype=fluence
@@ -48,6 +44,32 @@ ro.vendor.audio.soundtrigger.xatx.gmm.level.high=50
 ro.vendor.audio.soundtrigger.xatx.gmm.user.level.high=10
 ro.vendor.audio.soundtrigger.xatx.cnn.level.high=27
 ro.vendor.audio.soundtrigger.xatx.vop.level.high=10
+vendor.audio.adm.buffering.ms=6
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+vendor.audio.enable.mirrorlink=false
+vendor.audio.flac.sw.decoder.24bit=true
+vendor.audio.hal.boot.timeout.ms=20000
+vendor.audio.hal.output.suspend.supported=false
+vendor.audio.hw.aac.encoder=false
+vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.gapless.enabled=true
+vendor.audio.offload.multiaac.enable=true
+vendor.audio.offload.multiple.enabled=false
+vendor.audio.offload.passthrough=false
+vendor.audio.offload.track.enable=false
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.safx.pbe.enabled=false
+vendor.audio.spkcal.copy.inhal=true
+vendor.audio.tunnel.encode=false
+vendor.audio.usb.disable.sidetone=true
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+vendor.audio.volume.headset.gain.depcal=true
+vendor.audio_hal.in_period_size=144
+vendor.audio_hal.period_multiplier=3
+vendor.audio_hal.period_size=192
+vendor.voice.path.for.pcm.voip=false
 
 # App launch prefetching (IORapd)
 ro.iorapd.enable=false
@@ -132,6 +154,10 @@ persist.dbg.wfc_avail_ovr=1
 
 # Memory
 ro.vendor.qti.va_aosp.support=1
+
+# Media
+debug.stagefright.ccodec=1
+debug.stagefright.omx_default_rank=0
 
 # Property to enable/disable PASR
 vendor.power.pasr.enabled=true
