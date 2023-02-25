@@ -65,6 +65,7 @@ on fs
 
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/audio 0755 system system
+    mkdir /mnt/vendor/persist/subsys 0770 root system
     mkdir /mnt/vendor/persist/camera 0777 root root
     restorecon_recursive /mnt/vendor/persist
 
@@ -92,6 +93,18 @@ on post-fs-data
 
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
+
+    chown system system /dev/tfa_reg
+    chown system system /dev/tfa_rw
+    chown system system /dev/tfa_rpc
+    chown system system /dev/tfa_control
+    chmod 0660 /dev/tfa_reg
+    chmod 0660 /dev/tfa_rw
+    chmod 0660 /dev/tfa_rpc
+    chmod 0660 /dev/tfa_control
+
+on early-boot
+    start vendor.sensors
 
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
