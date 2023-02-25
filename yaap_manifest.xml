@@ -16,4 +16,8 @@
   <extend-project path="system/core"
           remote="pwnrazr"
           name="system_core" />
+
+  <extend-project path="frameworks/base"
+          remote="pwnrazr"
+          name="frameworks_base" />
 </manifest>
