@@ -16,14 +16,13 @@
 
 package org.lineageos.settings.popupcamera;
 
-import android.app.AlertDialog;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.Settings;
-
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference.OnPreferenceClickListener;
@@ -47,7 +46,7 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
 
         mCalibrationPreference = (Preference) findPreference(MOTOR_CALIBRATION_KEY);
         mCalibrationPreference.setOnPreferenceClickListener(this);
-        
+
         mAlwaysCameraSwitch = (SwitchPreference) findPreference(KEY_ALWAYS_CAMERA_DIALOG);
         boolean enabled = Settings.System.getInt(getContext().getContentResolver(),KEY_ALWAYS_CAMERA_DIALOG, 0) == 1;
         mAlwaysCameraSwitch.setChecked(enabled);

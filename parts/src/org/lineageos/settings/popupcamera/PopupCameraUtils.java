@@ -28,12 +28,12 @@ import android.view.KeyEvent;
 import android.view.KeyCharacterMap;
 
 public class PopupCameraUtils {
-
     private static final String TAG = "PopupCameraUtils";
     private static final boolean DEBUG = false;
 
     public static void startService(Context context) {
-        context.startServiceAsUser(new Intent(context, PopupCameraService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(
+                new Intent(context, PopupCameraService.class), UserHandle.CURRENT);
     }
 
     public static void triggerVirtualKeypress(Context context, final int keyCode) {
