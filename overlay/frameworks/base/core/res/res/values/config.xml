@@ -744,4 +744,7 @@
 
    <!-- Whether device supports increased touch sensitvity -->
     <bool name="config_supportGloveMode">true</bool>
+
+     <!-- Determines whether the shell features all run on another thread. -->
+     <bool name="config_enableShellMainThread">true</bool>
 </resources>
