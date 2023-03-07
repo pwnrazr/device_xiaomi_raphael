@@ -31,6 +31,10 @@
 # WiFi
 /vendor/bin/nv_mac                                                                                     u:object_r:vendor_wcnss_service_exec:s0
 
+# Xiaomi thermal daemon
+/vendor/bin/mi_thermald		                                                                           u:object_r:mi_thermald_exec:s0
+/data/vendor/thermal(/.*)?                                                                             u:object_r:thermal_data_file:s0
+
 #DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.4-service\.clearkey                           u:object_r:vendor_hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.4-service\.widevine                           u:object_r:vendor_hal_drm_widevine_exec:s0
