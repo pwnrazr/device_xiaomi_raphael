@@ -543,12 +543,12 @@ system_ext/lib64/fm_helium.so|dd0aa17b1b5d0cbce34d6d6343dc49883c5bfe73
 system_ext/lib64/libfm-hci.so|66993341bb7c9ea05ac7621e043bd3de86c06a8a
 -system_ext/lib64/vendor.qti.hardware.fm@1.0.so|e4bcec96323017d33e11739519481b1566939d85
 
-# FM (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/fm_qsoc_patches|62afd65922ee1d8ae3f5d20f40014178bc4b7284
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|725b7b33d2034487b4804c2d37249941f651a23a
-vendor/lib/vendor.qti.hardware.fm@1.0.so|e16ea9c7641064eb170b98f636fbbf81ae6a1618
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|5a22b01d24491c2faffdc7dc19e06d4b961c6e33
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|49e99338190dbbe0a5db2be70fa68f24e3fd18fa
+# FM (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
+vendor/bin/fm_qsoc_patches|2b6f2cf4c744eea232eedb4a6e4ea5ebbbac8efe
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|e1034aede67671b58091dc987d789f3bbbe26ed4
+vendor/lib/vendor.qti.hardware.fm@1.0.so|c036fbe16575a800994792431d10f6d1173cea26
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # Gatekeeper (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
