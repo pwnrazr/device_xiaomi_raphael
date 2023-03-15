@@ -698,7 +698,6 @@ vendor/lib64/libmulawdec.so
 system_ext/lib/libmmosal.so
 system_ext/lib64/libmmosal.so
 vendor/lib/libqcodec2.so
-vendor/lib64/libmmosal.so
 vendor/lib64/libqcodec2.so
 
 # Neural Networks (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
