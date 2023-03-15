@@ -644,23 +644,23 @@ vendor/lib64/libqmi_encdec.so|a18bb21e5b9b53e3dc8dc45f6e7e65e32a467607
 vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 vendor/lib64/libqmiservices.so|d3f7a54cc94a60286dec89caa2dd843da79b51c4
 
-# Keymaster (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+# Keymaster (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|002c638011b1936fecaa896874d3361ec68eaa46
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|3630c9aea09ea484578a260c6f007036d084089c
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti|30507f03bda271ca0052d6bd5177b8d7976dfbae
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|f2dfed2111ada63ddc5283e12b6cb051bd9f9736
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
-vendor/lib/libkeymasterdeviceutils.so|61c2c9e04e8b03af385e165d5a0d0ea692eda815
-vendor/lib/libkeymasterprovision.so|84257829a08f1508b6e6de5f93515a24b665a9e5
-vendor/lib/libkeymasterutils.so|be6e7e893f38d72c2e7ce6ec35730de1b2ec4fcf
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|9816f37e7487295e29a19d05c4a3e6b7b0ec35ea
+vendor/lib/libkeymasterdeviceutils.so|1795a8a4a92096c857db5a95b36f916a3d84264d
+vendor/lib/libkeymasterprovision.so|5a81ac44da5c5f182744e4207fe0e822d737099f
+vendor/lib/libkeymasterutils.so|c3750feb3b5f17b5d9b60e0cbb2cc976bbc1f8b0
 vendor/lib/libqcbor.so|e6907a4f9da62793c7e821fc5388c76c48f8774f
-vendor/lib/libqtikeymaster4.so|467b3d0ef6d371e19a0d90b8fcd158cf86842051
+vendor/lib/libqtikeymaster4.so|c35faa51571519a0311642dd692387580ea259e7
 vendor/lib/libspcom.so|3e1b92390ebcb02d35fcda89f80d1cfef3a03a71
-vendor/lib64/libkeymasterdeviceutils.so|1fcd23548fbfa3290b17806517c6929c3a9f4b53
-vendor/lib64/libkeymasterprovision.so|7444f5945a6ac771b997edd5f7088283c6c8490f
-vendor/lib64/libkeymasterutils.so|7e42e00998259abfeaf6bca3ec82d37f54dd9ff9
+vendor/lib64/libkeymasterdeviceutils.so|ae35058e3a887c0434d8d90470c2b33a2b8ddc1a
+vendor/lib64/libkeymasterprovision.so|20f964d6c902e003e826272f6227d23523056d1e
+vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
 vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
-vendor/lib64/libqtikeymaster4.so|bb08331f9b36c273ed44bbe3956ef7bafca97d2c
+vendor/lib64/libqtikeymaster4.so|f02887e22f3cec87c2df4f78142923f0ded909e3
 vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
 # Keystore (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
