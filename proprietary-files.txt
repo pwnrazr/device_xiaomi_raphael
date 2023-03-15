@@ -728,8 +728,8 @@ vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adc
 vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|4e83bd83fa439f15dc3c0a2256eadd81d6c45386
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|ac738d8aba807b3b150618ae89a9994453fd7b1f
 
-# Perf (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|f1df5e59faca69424b86b2deeb203ab4096e840d
+# Perf (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|4627a51573e47a54ebf96ea3623d647588a84277
 vendor/bin/msm_irqbalance|b075c2f4092c175950a2c26d19bf2013e2efd6d5
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
 vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
@@ -739,15 +739,15 @@ vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d26
 vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
 vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
 vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
-vendor/lib64/libappclassifier.so|0a3f393ceb33ca37a3ee7c608997807589f88418
-vendor/lib64/liblearningmodule.so|c2d6d757998b560c3217fa76fb94ce274c6c0601
-vendor/lib64/libmeters.so|7e9cb43ee0133e4ae19e7e639535f99b169ed7c2
-vendor/lib64/libperfconfig.so|004c0990c2054f351b119fbd04ef7bf62831338c
-vendor/lib64/libperfgluelayer.so|7fa8cae34af7f05b6f3faab9d7b02e91be578b64
-vendor/lib64/libqti-perfd-client.so|b50269897df4ae15ca57c21468153c66ad665a03
-vendor/lib64/libqti-perfd.so|1baa7bd8d21e149e1fd0233dc38e356e9724d237
-vendor/lib64/libqti-util.so|894c666ddfbb6485fa9c69cddbf2b11664ea4188
-vendor/lib64/vendor.qti.hardware.perf@2.2.so|f49863fd5313ccb7a0af2e16c0bae7d4de1ff5ca
+vendor/lib64/libappclassifier.so|684c838a9968ea09685e5edbe990ee5bee91a9a8
+vendor/lib64/liblearningmodule.so|064545ff65df121399113d3561ec82a0b135766c
+vendor/lib64/libmeters.so|5b929c11eb2976fcab2934848a0d0b49b0fafb36
+vendor/lib64/libperfconfig.so|06fc5f5cfb6dae18bba45372ff424a97769a60dd
+vendor/lib64/libperfgluelayer.so|5fd74627e6da137083a450e542673d4027d43d57
+vendor/lib64/libqti-perfd-client.so|62c21bcb8cac644c702fb53e3274ccdb1298c42d
+vendor/lib64/libqti-perfd.so|cd9c5dc9c440101f803e4393e28aad0bffda7284
+vendor/lib64/libqti-util.so|48519e0baba84978b8593576579d33cd78cd0f8f
+vendor/lib64/vendor.qti.hardware.perf@2.2.so|88c13e106ade95b947f64de3199602a43beb3034
 
 # OMX
 vendor/lib/libAlacSwDec.so
