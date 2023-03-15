@@ -663,9 +663,9 @@ vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
 vendor/lib64/libqtikeymaster4.so|f02887e22f3cec87c2df4f78142923f0ded909e3
 vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
-# Keystore (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib64/libkeystore-engine-wifi-hidl.so|dbc2e771662ed2805d0e6ee7e30f71dc9b4a8b31
-vendor/lib64/libkeystore-wifi-hidl.so|1f6c9000810916246871c93119a9c433cc75bee6
+# Keystore (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
+vendor/lib64/libkeystore-engine-wifi-hidl.so|9154f4421e3370e7c5d85ab30e57f6090d115f8b
+vendor/lib64/libkeystore-wifi-hidl.so|d3dbd9e3cf526c7735a0b3cd937000a93feb1866
 
 # Listen
 vendor/etc/sound_trigger_mixer_paths.xml
