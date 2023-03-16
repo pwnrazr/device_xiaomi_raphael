@@ -426,7 +426,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|12d4edcd85
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
-# Display (Postprocessing) (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+# Display (Postprocessing) (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
 vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
 
@@ -448,7 +448,7 @@ system_ext/lib64/libdpmtcm.so|ac8bb063de43870f67e2aba15eee5baaa9864c84
 system_ext/lib64/vendor.qti.diaghal@1.0.so|0158bec299e6bef47604a946145ab321184b2c24
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|d2651605b9b1dcc84d84b411a5b238c7f73aed77
 
-# DPM (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+# DPM (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
@@ -592,7 +592,7 @@ vendor/lib64/vendor.qti.gnss@4.0.so|5ef1845cf0a310a52bfbdbc719685270ea4e39b3
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 vendor/lib64/libloc_api_wds.so|0f506584fe78cc1be3cf0f022b4314d2575796b1
 
-# Graphics (HDR) (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+# Graphics (HDR) (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/libhdr_tm.so|a222a7d838735c5ce73f06d4096fea3ca19611c8
 
 # Hotword Enrollment
@@ -792,7 +792,7 @@ vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libswvdec.so
 
-# Peripheral (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+# Peripheral (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/pm-proxy|c36785c811db9af0d6d938cdbc6b90dedaaf706e
 vendor/bin/pm-service|c3d1b2f6e7f731b1328afbcf8e344405744528e3
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
