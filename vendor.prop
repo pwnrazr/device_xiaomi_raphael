@@ -128,9 +128,6 @@ ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
 ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
 ro.vendor.display.sensortype=2
 
-# Fastbootd
-ro.fastbootd.available=true
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
