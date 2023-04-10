@@ -134,6 +134,9 @@ ro.fastbootd.available=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
