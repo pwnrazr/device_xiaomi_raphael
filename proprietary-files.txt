@@ -596,9 +596,6 @@ vendor/lib64/libhdr_tm.so|a222a7d838735c5ce73f06d4096fea3ca19611c8
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IFAA
--app/IFAAService/IFAAService.apk
-
 # Interface (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
