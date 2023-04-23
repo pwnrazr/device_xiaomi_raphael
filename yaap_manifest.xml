@@ -13,6 +13,8 @@
   <project path="vendor/qcom/common" remote="yaosp" name="vendor_qcom_common" revision="thirteen" clone-depth="1"/>
   <project path="device/qcom/common" remote="yaap" name="device_qcom_common" revision="thirteen" clone-depth="1"/>
 
+  <project path="hardware/xiaomi" remote="lineage" name="android_hardware_xiaomi" revision="lineage-20" />
+
   <extend-project path="system/core"
           remote="pwnrazr"
           name="system_core" />

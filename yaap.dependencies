@@ -12,6 +12,10 @@
         "target_path":  "vendor/xiaomi/raphael"
     },
     {
+	"repository"   : "hardware_xiaomi",
+	"target_path"  : "hardware/xiaomi"
+    },
+    {
 	"repository"  : "yaosp/vendor_qcom_common",
 	"target_path" : "vendor/qcom/common",
 	"remote"      : "gitlab"
