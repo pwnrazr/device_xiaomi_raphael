@@ -110,7 +110,6 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
-vendor/lib/liba2dpoffload.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -721,32 +720,10 @@ vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adc
 vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|4e83bd83fa439f15dc3c0a2256eadd81d6c45386
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|ac738d8aba807b3b150618ae89a9994453fd7b1f
 
-# Perf (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|4627a51573e47a54ebf96ea3623d647588a84277
-vendor/bin/msm_irqbalance|b075c2f4092c175950a2c26d19bf2013e2efd6d5
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
-vendor/etc/lm/AppClassifierFeature.xml|80bcbf8fc50ed706e8549432140323dbb9e8ae4c
-vendor/etc/lm/GameOptimizationFeature.xml|5314e8dfdf363d0fbe4599ba64e3e765878569b9
-vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d261c
-vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
-vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
-vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
-vendor/lib64/libappclassifier.so|684c838a9968ea09685e5edbe990ee5bee91a9a8
-vendor/lib64/liblearningmodule.so|064545ff65df121399113d3561ec82a0b135766c
-vendor/lib64/libmeters.so|5b929c11eb2976fcab2934848a0d0b49b0fafb36
-vendor/lib64/libperfconfig.so|06fc5f5cfb6dae18bba45372ff424a97769a60dd
-vendor/lib64/libperfgluelayer.so|5fd74627e6da137083a450e542673d4027d43d57
-vendor/lib64/libqti-perfd-client.so|62c21bcb8cac644c702fb53e3274ccdb1298c42d
-vendor/lib64/libqti-perfd.so|cd9c5dc9c440101f803e4393e28aad0bffda7284
-vendor/lib64/libqti-util.so|48519e0baba84978b8593576579d33cd78cd0f8f
-vendor/lib64/vendor.qti.hardware.perf@2.2.so|88c13e106ade95b947f64de3199602a43beb3034
-
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -768,7 +745,6 @@ vendor/lib/libswvdec.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libMpeg4SwEncoder.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so

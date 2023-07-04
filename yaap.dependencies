@@ -1,9 +1,5 @@
 [
     {
-	"repository"  : "device_qcom_common",
-	"target_path" : "device/qcom/common"
-    },
-    {
         "repository":   "kernel_xiaomi_sm8150",
         "target_path":  "kernel/xiaomi/sm8150"
     },
@@ -15,9 +11,4 @@
 	"repository"   : "hardware_xiaomi",
 	"target_path"  : "hardware/xiaomi"
     },
-    {
-	"repository"  : "yaosp/vendor_qcom_common",
-	"target_path" : "vendor/qcom/common",
-	"remote"      : "gitlab"
-    }
 ]

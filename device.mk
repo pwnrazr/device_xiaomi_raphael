@@ -25,10 +25,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/raphael/raphael-vendor.mk)
 
-# Get Perf aspects
-$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
-$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
-
 # Get Adreno aspects
 $(call inherit-product, device/qcom/common/vendor/adreno-6xx-legacy/qti-adreno-6xx-legacy.mk)
 
@@ -575,7 +571,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable zygote critical window.
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
-
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
