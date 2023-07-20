@@ -23,6 +23,10 @@ cc_binary {
         "vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
 
+    lto: {
+        thin: true,
+    },
+    whole_program_vtables: true,
 }
 
 cc_library_static {
@@ -34,4 +38,8 @@ cc_library_static {
     header_libs: [
         "generated_kernel_headers",
     ],
+    lto: {
+        thin: true,
+    },
+    whole_program_vtables: true,
 }
