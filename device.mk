@@ -542,10 +542,6 @@ PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 PRODUCT_PRODUCT_VNDK_VERSION := current
 
-# loggy
-PRODUCT_PACKAGES += \
-    loggy.sh
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
