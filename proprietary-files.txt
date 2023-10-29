@@ -798,6 +798,7 @@ vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
+vendor/lib64/deviceInfoServiceModule.so|e460b52183f4dcfb47904a70dfab987b3704ed57
 vendor/lib64/libconfigdb.so|60b703bd94b237d3b35c455e79b4cfecd5a00ae7
 vendor/lib64/libdsi_netctrl.so|96b8fc890d40105089579eec58acb56858bc57ef
 vendor/lib64/liblqe.so|e2775b915760d6ad3d8355080a62019c3efa8e3b
