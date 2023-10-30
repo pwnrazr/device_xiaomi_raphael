@@ -22,18 +22,20 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Switch;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
+
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
+
 import org.lineageos.settings.R;
 
-public class DiracSettingsFragment extends PreferenceFragment
-        implements OnPreferenceChangeListener, OnMainSwitchChangeListener {
+public class DiracSettingsFragment extends PreferenceFragment implements
+        OnPreferenceChangeListener, OnMainSwitchChangeListener {
 
     private static final String PREF_ENABLE = "dirac_enable";
     private static final String PREF_HEADSET = "dirac_headset_pref";
@@ -87,8 +89,7 @@ public class DiracSettingsFragment extends PreferenceFragment
             case PREF_PRESET:
                 DiracUtils.setLevel((String) newValue);
                 return true;
-            default:
-                return false;
+            default: return false;
         }
     }
 
@@ -101,7 +102,7 @@ public class DiracSettingsFragment extends PreferenceFragment
         mHeadsetType.setEnabled(isChecked);
         mPreset.setEnabled(isChecked);
 
-        if (!isChecked) {
+        if (!isChecked){
             mHifi.setChecked(false);
             DiracUtils.setHifiMode(0);
         }
