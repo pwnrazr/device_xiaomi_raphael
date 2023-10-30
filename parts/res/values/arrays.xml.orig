@@ -15,6 +15,19 @@
      limitations under the License.
 -->
 <resources>
+<<<<<<< HEAD
+    <!-- Pickup gesture -->
+    <string-array name="pick_up_gesture_entries" translatable="false">
+        <item>@string/disabled</item>
+        <item>@string/pick_up_gesture_summary</item>
+        <item>@string/pick_up_wake_gesture_summary</item>
+    </string-array>
+
+    <string-array name="pick_up_gesture_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+=======
     <!-- Values for Dirac headset pref -->
     <string-array name="dirac_headset_pref_entries" translatable="false">
         <item>@string/dirac_headset_default</item>
@@ -96,19 +109,7 @@
         <item>"0,4,2,0,-2,-2,4"</item>
         <item>"2,0,0,-2,-4,0,0"</item>
         <item>"10,8,-3,0,-3,5,5"</item>
-    </string-array>
-
-    <!-- Pickup gesture -->
-    <string-array name="pick_up_gesture_entries" translatable="false">
-        <item>@string/disabled</item>
-        <item>@string/pick_up_gesture_summary</item>
-        <item>@string/pick_up_wake_gesture_summary</item>
-    </string-array>
-
-    <string-array name="pick_up_gesture_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+>>>>>>> parent of 2a94dc6f2 (raphael: parts: Kill dirac)
     </string-array>
 
     <!-- Popup camera effect names -->

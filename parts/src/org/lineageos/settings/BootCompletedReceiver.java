@@ -21,6 +21,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.utils.FileUtils;
 import android.content.SharedPreferences;
@@ -38,6 +39,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+	try {
+        DiracUtils.initialize(context);
+        } catch (Exception e) {
+            Log.d(TAG, "Dirac is not present in system");
+        }
         PopupCameraUtils.startService(context);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
