@@ -166,7 +166,8 @@ persist.dbg.wfc_avail_ovr=1
 ro.vendor.qti.va_aosp.support=1
 
 # Media
-debug.stagefright.ccodec=1
+debug.media.codec2=2
+debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
 # Property to enable/disable PASR
