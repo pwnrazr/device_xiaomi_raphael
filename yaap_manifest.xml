@@ -3,17 +3,11 @@
   <remote name="pwnrazr"
            fetch="https://github.com/pwnrazr" />
 
-  <remote name="yaosp"
-           fetch="https://gitlab.com/yaosp" />
-
   <project path="device/xiaomi/raphael" remote="pwnrazr" name="device_xiaomi_raphael"  revision="fourteen" clone-depth="999" />
   <project path="vendor/xiaomi/raphael" remote="pwnrazr" name="vendor_xiaomi_raphael" revision="fourteen" clone-depth="3" />
   <project path="kernel/xiaomi/sm8150" remote="pwnrazr" name="kernel_raphael_sm8150" revision="inline-dynamic-partitions" clone-depth="1"/>
 
-  <project path="vendor/qcom/common" remote="yaosp" name="vendor_qcom_common" revision="fourteen" clone-depth="1"/>
-  <project path="device/qcom/common" remote="yaap" name="device_qcom_common" revision="fourteen" clone-depth="1"/>
-
-  <project path="hardware/xiaomi" remote="lineage" name="android_hardware_xiaomi" revision="lineage-21" />
+  <project path="hardware/xiaomi" remote="pwnrazr" name="android_hardware_xiaomi" revision="fourteen" />
 
   <extend-project path="system/core"
           remote="pwnrazr"
